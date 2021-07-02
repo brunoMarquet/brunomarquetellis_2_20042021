@@ -64,9 +64,9 @@ a {
 
 
 h1 {
-  padding-left: 25px);
+  padding-left: 25px;
   font-weight: bolder;
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 h2 {
@@ -77,6 +77,8 @@ h2 {
 ul {
  /* list-style-type: none; */
 }
+h5{ padding-left: 25px;
+    font-size: 1.2em;}
 
 * {
   box-sizing: border-box;
@@ -126,6 +128,7 @@ header nav a:hover,
 .navinscrire {
   padding:10px;
   font-weight: bold;
+   border-top: 1px solid transparent;
 }
 
 header, header nav{
@@ -288,13 +291,13 @@ ________________formulaire _________________*/
   
   .filtre:hover .filtre_txt{color:#0065fc;}
  
- 
-
+/* .filtre input:checked  ~ .filtre {
+     background-color: red;
+ }*/
 
  .filtre input:checked  ~ .filtre_txt {
   color: #0065fc;text-decoration: underline #0065fc;
- ;
-}
+ }
  
 
 .filtre input ,#input_search{
@@ -353,6 +356,17 @@ main {
   oups */
 }
 
+#leshotelsBox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  background: #f2f2f2;
+
+  /*padding: 10px*/
+  flex: 2;
+}
+
 #city_hotelspopu
    {
  
@@ -377,16 +391,7 @@ main {
   padding: 10px;
 }
 
-#leshotelsBox {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  border-radius: 20px;
-  background: #f2f2f2;
 
-  /*padding: 10px*/
-  flex: 2;
-}
 
 /*____________________________________________
 ____________________________ cadre photo
@@ -395,7 +400,6 @@ ________________________________________________
 */
 .cadrephoto_1 {
   height: 120px;
-  /*width: 240px;*/
   border-radius: 20px 20px 0 0;
   overflow: hidden;
 }
@@ -447,13 +451,13 @@ ________________________________________________
   border: 5px solid #fff;
   border-radius: 24px;
   background: #fff;
-  width: 240px;
+  width: 180px;
   box-shadow: 3px 3px hsl(0, 0%, 50%, 0.3);
   /*box-shadow: 0px 0px 8px #000000;*/
   flex: 1;
-  min-width: 300px;
+  min-width: 240px;
 }
-
+.annonce1:hover{cursor: pointer;}
 .annonce1_text {
 
 display: flex;
@@ -535,6 +539,8 @@ ________________________________________________
 .activboxH:hover {
   background: #f2f2f2;
   box-shadow: 0px 0px 4px #000000;
+  cursor: pointer;
+  
 }
 .activboxH:hover p {
   color: #0065fc;
@@ -687,8 +693,8 @@ font-weight: 900;color:white;
 .titre_filtre {width:100%;}
 
   .activboxH {
+     min-width: 100%;
     width: 400px;
-    min-width: 400px;
   height: 170px;
   }
   
