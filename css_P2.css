@@ -1,0 +1,778 @@
+/*
+Bleu                             #0065FC
+  Bleu clair                      #DEEBFF
+  Gris                             #F2F2F2
+test bof:
+h1 h2{color: blue;}
+h2 h3{color: red;}
+ressource: hoverhttps://yesyouweb.com/transitions-css3/
+
+[class~=star] à tester
+[title~=flower]
+
+
+
+.fa, .fas {
+    font-weight: 900;
+    .annonce1::before{
+  
+  content:"hotel : " counter(myIndex) url("../images/Reservia.svg")
+}
+
+ }
+
+#city_hotels  {
+   
+   flex:66%;
+   flex-direction:row;
+  
+  border-radius: 20px;
+  background:#F2F2F2;
+  padding: 20px;
+   min-height:400px;
+     }
+     
+   
+   
+*/
+
+/* ____________ à deplacer___________*/
+
+/* ____________ à deplacer___________*/
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+
+      font-family: "Raleway-Regular","Arial"," Verdana", "sans-serif";
+      /*utilisation des polices sur la totalité de la page */
+  font-size: 100%; /* nota bene 100% = 16px  - Ailleurs mettre combien de rem - par ex au lieu de 32px mettre 2rem */
+  font-size: 1em;
+  
+  /**/
+  padding-left: 15px;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+
+
+h1 {
+  padding-left: 25px);
+  font-weight: bolder;
+  font-size: 2em;
+}
+
+h2 {
+  padding-left: 15px;
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+ul {
+ /* list-style-type: none; */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*_________________________________________
+
+________________header _________________
+*/
+
+*_________________________________________
+
+________________header _________________
+*/
+
+
+/*pbme back-up -redondance*/
+
+header nav a,
+.navinscrire {
+  text-align: center;
+  margin-left: 1em;
+  margin-right: 1em;
+  padding-top: 1em;
+  border-top: 1px solid transparent;
+  color: #000;
+}
+
+
+header nav a:hover,
+.navinscrire:hover {
+  border-top: 1px solid #0065fc;
+  color: #0065fc;
+}
+
+
+.navCAtegory {
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+/*news*/
+
+.navinscrire {
+  padding:10px;
+  font-weight: bold;
+}
+
+header, header nav{
+ 
+ flex-wrap: wrap;
+ display: flex;
+  flex-direction: row ;
+ 
+justify-content: flex-end;
+}
+
+header nav a{
+  text-align:center;
+  margin-left: 5px;
+  border-top: 1px solid transparent;
+  padding:10px;
+color:#000;
+}
+header img{
+    margin-right: auto;
+}
+header a:hover {
+  color: grey;
+}
+
+header nav a:hover{
+  border-top: 1px solid #0065fc;
+  color:#0065fc;
+}
+
+/*_________________________________________
+
+________________formulaire _________________*/
+
+/*#liste_filtres */
+/* #liste_filtres::before {
+  content: "Filtres : ";
+  font-size: 1.1em;
+  	margin-left: 0;
+  	margin-top: 0px;
+}
+*/
+.titre_filtre {font-size: 1.2em;
+  font-weight: bold;
+  
+}
+
+.filtre .fas{
+    display: flex;
+    color: #0065FC;
+    width: 43px;
+    height: 43px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+#place {
+  border-color: transparent;
+  font-size: 1.3em;
+}
+#place:focus {
+  border-color: blue;
+  
+}
+
+.fa-map-marker-alt {
+  padding: 13px 15px;
+  border-radius: 15px 0 0 15px;
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.fa-info {
+  font-size: 0.8em;
+  padding: 4px;
+  margin-right: 8px;
+  width: 15px;
+  color: #0065fc;
+  height: 15px;
+  /*
+    */
+  text-align: center;
+  border: 1px solid #f2f2f2;
+  border-radius: 50%;
+}
+.bt_search:after{
+ 
+   content: "Rechercher";
+
+}
+
+
+.bt_search {
+  padding: 13px 15px;
+  font-size: 1em;
+  color: white;
+
+  background-color: #0065fc;
+  /*border: 1px solid transparent;
+  c'etait necessaire lorsqu'onutisisait un submitt
+  */
+  border-radius: 0 15px 15px 0;
+  cursor: pointer;
+}
+
+.bt_search:hover{box-shadow: 0px 0px 2px #000000;}
+
+.fa,
+.fas {
+  font-weight: 900;
+}
+
+.filtre .fas{
+    display: flex;
+    color: #0065FC;
+    background-color: #DEEBFF;
+    width: 43px;
+    height: 43px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    /*border: 1px solid #f2f2f2;*/
+  border-radius: 50%;
+}
+
+#liste_filtres {
+  display: flex;
+  align-items: center;
+
+  position: relative;
+  flex-flow: row wrap;
+ 
+  
+
+  /*
+   height: 36px; betise ds ce cas!important
+  margin: 15px 0 30px 0;
+  */
+}
+.filtre {
+  display: flex;
+  align-items: center;
+  border: #f2f2f2 solid 2px;
+  height: 43px;
+  border-radius: 45px;
+  margin-left: 30px;
+  padding-right: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+  
+  .filtre:hover{border:#0065fc solid 2px;}
+  
+  .filtre:hover .fas,
+  .filtre input:checked  ~ .fas{color: white;
+  background-color: #0065fc;}
+  
+  .filtre:hover .filtre_txt{color:#0065fc;}
+ 
+ 
+
+
+ .filtre input:checked  ~ .filtre_txt {
+  color: #0065fc;text-decoration: underline #0065fc;
+ ;
+}
+ 
+
+.filtre input ,#input_search{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.filtre_txt {
+  padding-left: 20px;
+}
+
+liste_filtres p {
+  font-size: 1, 3em;
+}
+.fa-info{
+    display: flex;
+    color: #0065FC;
+    border:#F2F2F2 solid 2px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2px;
+    margin-right: 10px;
+}
+
+.info_dispo {display: flex;align-items: center;}
+
+.infos p {
+  	font-size: 1.1em;
+  	margin-left: 0;
+  	margin-top: 20px;
+}
+
+/*____________________________________________
+____________________________ hebergement and co
+________________________________________________
+
+*/
+
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 30px;
+   /*
+  
+  margin: 0 50px;
+
+  gap: 50px;
+  oups */
+}
+
+#city_hotelspopu
+   {
+ 
+    display:flex;
+    flex:1;
+    flex-direction: column;
+    align-items:center;
+   /*  justify-content:center;*/
+   border-radius: 20px;
+   background:#F2F2F2;
+   margin-left:20px;
+  
+     }
+
+#city_activ {
+  /*border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 50px;
+  height: 600px;
+  padding: 10px;
+}
+
+#leshotelsBox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  background: #f2f2f2;
+
+  /*padding: 10px*/
+  flex: 2;
+}
+
+/*____________________________________________
+____________________________ cadre photo
+________________________________________________
+
+*/
+.cadrephoto_1 {
+  height: 120px;
+  /*width: 240px;*/
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+}
+
+.cadrephoto_2 {
+  /* a factoriser ? */
+  height: 130px;
+  width: 130px;
+  min-width: 130px;
+  border-radius: 20px 0 0 20px;
+  overflow: hidden;
+}
+.cadrephoto_3{
+  height: 120px;
+  flex 1;
+  /*width: 240px*/;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  
+}
+
+.cadrephoto_1 img,
+.cadrephoto_2 img,
+.cadrephoto_3 img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/*____________________________________________
+____________________________ hotel normaux
+________________________________________________
+
+*/
+
+
+.les_annonces1 {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.annonce1 {
+  display: flex;
+  flex-direction: column;
+
+  margin: 5px;
+  border: 5px solid #fff;
+  border-radius: 24px;
+  background: #fff;
+  width: 240px;
+  box-shadow: 3px 3px hsl(0, 0%, 50%, 0.3);
+  /*box-shadow: 0px 0px 8px #000000;*/
+  flex: 1;
+  min-width: 300px;
+}
+
+.annonce1_text {
+
+display: flex;
+flex-direction:column;
+/*justify-content: flex-start;
+line-height: 1px;
+*/
+
+margin-left: 12px;
+  margin-top: 6px;
+}
+
+/*____________________________________________
+____________________________ hotel popu
+________________________________________________
+
+*/
+.fa-chart-line{margin-left: 40px}
+
+.annonce2 {
+  display: flex;
+
+  margin: 10px;
+  border: 5px solid #fff;
+  border-radius: 24px;
+  
+  width: 90%;
+  height: 140px;
+  background: white;
+  box-shadow: 0px 0px 4px #000000;
+}
+
+
+.annonce2_text {
+  flex 3;
+   /*background: red;*/
+   
+  min-width 100px;
+  margin-left: 10px;
+  
+  margin-top: 0px;
+}
+/*____________________________________________
+____________________________ Activité
+________________________________________________
+
+*/
+
+/*.activboxH:nth-child(3n-3) .cadrephoto_3 {
+  height: 240px;
+ 
+} */
+
+
+ #city_activ {padding-left:0px;margin-left:0px;}
+
+.activboxH:nth-child(3n-2) .cadrephoto_3 {
+  height: 384px;
+}
+.activboxH:nth-child(3n-1) .cadrephoto_3 {
+  height: 200px;
+}
+
+.activboxH {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  margin-left: 15px;
+  border-radius: 20px;
+  background: #fff;
+  width: 240px;
+  box-shadow: 0px 0px 2px #000000;
+}
+
+.activboxH p {
+  margin-left: 12px;
+}
+
+.activboxH:hover {
+  background: #f2f2f2;
+  box-shadow: 0px 0px 4px #000000;
+}
+.activboxH:hover p {
+  color: #0065fc;
+  transition: background-color 0, 2s;
+}
+
+
+
+.annonce1_text > p ,.annonce2_text > p {
+  font-size: 0.9em;
+  line-height : 1.2;
+ /* margin: 0px;
+  padding:0px; */
+}
+
+.annonce1_text p + p,.annonce2_text  p + p{
+  color: grey;
+  font-size: 0.8em;
+  margin: 0px;
+  padding:0px;
+}
+.annonce1_text strong, .annonce2_text strong {
+  font-size: 0.9em;
+}
+
+.les_annonces2 {
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
+
+}
+
+.annonce2_text  p + p{
+ 
+  padding-bottom: 30px;
+}
+
+
+footer {
+  background: #f2f2f2;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 40px;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+footer .foot_txt {
+  flex: 28%;
+  padding-left: 10px;
+  /*display: flex;
+  justify-content: flex-start;
+  
+  flex-direction: column;
+  */
+  
+  
+}
+
+footer h4 {
+   padding-left: 36px;
+}
+footer li {
+ list-style-type: none;
+  cursor: pointer;
+}
+
+
+
+
+/*_____________________
+
+----------- @media query
+_____________________*/
+
+
+@media only screen and (max-width: 990px) {
+  
+  #city_activ {
+    height: auto;
+    align-items: center;
+    
+     margin-left: 50px;
+    /*justify-content: center;*/
+    width: 80px;
+    
+  }
+  
+.activboxH:nth-child(3n-2)  {
+  min-width: 450px;
+}
+.activboxH:nth-child(3n-1)  {
+  min-width: 300px;
+}
+.activboxH:nth-child(3n) {
+  min-width: 160px;
+}
+  
+ #city_hotelspopu {
+    order: -2;
+    width: 100%;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    border-radius: 0px;
+  }
+  
+}
+
+/*_____________________
+
+----------- @media query
+_____________________*/
+
+
+
+@media only screen and (max-width: 600px) {
+  
+ header nav{width:100%;
+   justify-content:space-evenly;
+ }
+ 
+ 
+.subscribe {
+    order: 2;
+  }
+  header nav {
+    order: 3;
+  }
+  
+  header nav{width:100%;}
+  
+ header nav a{
+border-bottom: 1px solid transparent;
+     }
+     
+   header nav a:hover{border-bottom: 1px solid #0065fc;border-top: 1px solid transparent;}
+  
+  /*--------manip formulaire-------------*/
+
+ 
+ .bt_search{border-radius:15px; }
+  
+ .bt_search:after{
+  font-family: 'Font Awesome 5 Free';
+   content: "\f002";
+font-weight: 900;color:white;
+  }
+   #city_activ {padding-left:0px;margin-left:0px;}/*De base?*/
+  
+.titre_filtre {width:100%;}
+
+  .activboxH {
+    width: 400px;
+    min-width: 400px;
+  height: 170px;
+  }
+  
+  
+}
+
+
+
+
+
+
+/*_____________________
+
+etoile à modif
+_____________________*/
+
+.star0:after {
+  font-family: "Font Awesome 5 Free";
+  color: grey;
+  font-weight: 900;
+  font-size: 0.7em;
+  content: "\f005\f005\f005\f005\f005";
+}
+.star1:after {
+  font-family: "Font Awesome 5 Free";
+  color: grey;
+  font-weight: 900;
+  font-size: 0.7em;
+  content: "\f005\f005\f005\f005";
+}
+.star2:after {
+  font-family: "Font Awesome 5 Free";
+  color: grey;
+  font-weight: 900;
+  font-size: 0.7em;
+  content: "\f005\f005\f005";
+}
+.star3:after {
+  font-family: "Font Awesome 5 Free";
+  color: grey;
+  font-weight: 900;
+  font-size: 0.7em;
+  content: "\f005\f005";
+}
+.star4:after {
+  font-family: "Font Awesome 5 Free";
+  color: grey;
+  font-weight: 900;
+  font-size: 0.7em;
+  content: "\f005";
+}
+
+.star5:before {
+  font-family: "Font Awesome 5 Free";
+  color: #0065fc;
+  font-weight: 900;
+  font-size: 0.7em;
+  content: "\f005\f005\f005\f005\f005";
+}
+.star4:before {
+  font-family: "Font Awesome 5 Free";
+  color: #0065fc;
+  font-weight: 900;
+  font-size: 0.7em;
+  content: "\f005\f005\f005\f005";
+}
+.star3:before {
+  font-family: "Font Awesome 5 Free";
+  color: #0065fc;
+  font-weight: 900;
+  font-size: 0.7em;
+  content: "\f005\f005\f005";
+}
+.star2:before {
+  font-family: "Font Awesome 5 Free";
+  color: #0065fc;
+  font-weight: 900;
+  font-size: 0.7em;
+  content: "\f005\f005";
+}
+.star1:before {
+  font-family: "Font Awesome 5 Free";
+  color: #0065fc;
+  font-weight: 900;
+  font-size: 0.7em;
+  content: "\f005";
+}

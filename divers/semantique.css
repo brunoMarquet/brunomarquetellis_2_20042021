@@ -1,0 +1,70 @@
+/*
+css pouranalyse semantique rapide
+*/
+
+nav: after {
+
+
+    content: '';
+   /* position: absolute;*/
+    top: -3px;
+    left: -3px;
+    bottom: -3px;
+    right: -3px;
+    border: 1px #888 solid;
+}
+
+section{
+ /* border: 1px green solid;*/
+   outline: solid 4px rgba(0, 255, 0, 0.6);
+   counter-increment: numero_1;
+  
+}
+section:before{
+    content: 'balise section 'counter(numero_1);
+    color: green;
+  
+}
+
+main{outline: solid 4px rgba(255, 0, 0, 0.6);}
+main:before{
+    content: 'balise main';
+    color: red;
+  
+}
+article{
+  /*border: 1px blue solid;*/
+   outline: solid 4px rgba(0, 0, 255, 0.6);
+    counter-increment: numero_2;
+}
+article:before{
+    content: 'tag article 'counter(numero_1)'-'counter(numero_2);
+    color: blue;
+  
+}
+footer{border: 1px coral solid;}
+footer:before{
+    content: 'balise footer';
+    color: coral;
+  
+}
+header{border: 1px olive solid;}
+header:before{
+    content: 'balise header';
+    color: olive;
+  
+}
+nav{border: 1px orange solid;}
+nav:before{
+    content: 'balise nav';
+    color: orange;
+    
+  
+}
+aside{border: 1px red solid;}
+aside:before{
+    content: 'balise aside';
+    color: red;
+    
+  
+}

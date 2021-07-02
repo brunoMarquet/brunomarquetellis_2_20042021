@@ -1,0 +1,322 @@
+<html lang="fr">
+
+<head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+
+  
+<script>
+
+
+function edit_etoile(entier){
+ 
+  
+ vtt='<p><span class="starsBlue">';
+ 
+ for (i=0;i<5;i++)
+  {
+    if(i==entier){vtt+="</span><span class='etoilG'>";}
+ vtt+='<i class="fas fa-star"></i>';
+  }
+  vtt+="</span></p>"
+// alert(vtt);
+   document.write(vtt); // ou un return!!!
+}
+
+</script>
+
+
+<style>
+
+main{
+display: flex;
+
+  gap: 20px;
+}
+
+header{
+      display: flex ;
+       justify-content:space-evenly;
+       align-items:center;
+       padding: 15px;
+      border: 1px solid #0065FC;
+      border-radius: 0 10px;
+    }
+
+
+h2{
+  font-size: 18px;
+  padding: 10px;
+  border-left: 1px solid blue;
+  border-bottom: 1px solid blue;
+   border-radius: 0 10px;
+}
+
+
+section{
+  align-self: auto;
+   counter-increment: numero_1;
+  flex: 30%;
+  padding: 15px;
+  margin: 10px;
+  border: 1px solid #0065FC;
+  border-radius: 10px;
+  
+}
+section:before{
+    content: 'Choix : 'counter(numero_1);
+    color: blue;
+  
+}
+
+.starsBlue{color:#0065FC;}
+
+.starsB1{color:#0065FC;}
+
+.starsG1 , .etoilG {color:grey;}
+
+.starsB1:before ,.starsG1:before{
+ font-family: 'Font Awesome 5 Free';
+   content: "\f005";
+   font-weight: 900;
+}
+
+
+
+
+
+.star0:after {font-family: 'Font Awesome 5 Free';color:grey;font-weight: 900;content: "\f005\f005\f005\f005\f005";}
+.star1:after {font-family: 'Font Awesome 5 Free';color:grey;font-weight: 900;content: "\f005\f005\f005\f005";}
+.star2:after {font-family: 'Font Awesome 5 Free';color:grey;font-weight: 900;content: "\f005\f005\f005";}
+.star3:after {font-family: 'Font Awesome 5 Free';color:grey;font-weight: 900;content: "\f005\f005";}
+.star4:after {font-family: 'Font Awesome 5 Free';color:grey;font-weight: 900;content: "\f005";}
+
+.star5:before {font-family: 'Font Awesome 5 Free';color:#0065FC;font-weight: 900;content: "\f005\f005\f005\f005\f005";}
+.star4:before {font-family: 'Font Awesome 5 Free';color:#0065FC;font-weight: 900;content: "\f005\f005\f005\f005";}
+.star3:before {font-family: 'Font Awesome 5 Free';color:#0065FC;font-weight: 900;content: "\f005\f005\f005";}
+.star2:before {font-family: 'Font Awesome 5 Free';color:#0065FC;font-weight: 900;content: "\f005\f005";}
+.star1:before {font-family: 'Font Awesome 5 Free';color:#0065FC;font-weight: 900;content: "\f005";}
+
+
+
+
+
+
+
+section:nth-child(4). fa-star {color: grey;}
+
+/*section4 .fa-star {color: grey;}*/
+
+.toil0 .fa-star{color: grey;}
+
+.toil1 .fa-star:nth-child(1){color: #0065FC;}
+
+.toil2 .fa-star:nth-child(1),.toil2 .fa-star:nth-child(2) {color: #0065FC;}
+.toil3 .fa-star:nth-child(1), .toil3 .fa-star:nth-child(2), .toil3 .fa-star:nth-child(3){color: #0065FC;}
+.toil4 .fa-star:nth-child(1), .toil4 .fa-star:nth-child(2), .toil4 .fa-star:nth-child(3),.toil4 .fa-star:nth-child(4){color: #0065FC;}
+.toil5 .fa-star{color: #0065FC;}
+
+
+div label { content: 'input: '; color: red; }
+
+input + label::before {
+  content: 'click my input';
+  color: black;
+}
+
+
+
+
+</style>
+</head>
+<body>
+   <header>
+    <a href="../index.html" >
+            <img src="../images/Reservia.svg"  alt="logo de Reservia" /></a>
+    <h1>Edition des "étoiles"</h1>
+  <a href="index_make.html" ><h2>make-up</h2></a>
+  </header>
+  
+<h1>Recherche de solutions sur les étoiles de notations etc...</h1>
+<h2>
+  En regardant le code de(s) projets identiques (et ce pour des raisons diverses : entraide curiosité et pseudo--espionage...)
+  Donc dans un 1er temps j'ai proposé avec une classe englobante et un enfant qui redéfinie la couleur..
+  (ps je ne l'ai pas reproduite exactement ici sic!) : <div class="starsBlue">
+                             <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+		                        
+    </div>
+    
+
+</h2>
+<main>
+  
+  <section>
+    <h2>Ecriture en javascript avec une fonction "edit_etoile(0)" à edit_etoile(5)</h2>
+    <script>
+      edit_etoile(0);
+      edit_etoile(1);
+       edit_etoile(2);
+        edit_etoile(3);
+         edit_etoile(4);
+          edit_etoile(5);
+    </script>
+    
+    <h2>"code" de la fonction js: </h2>
+ <xmp>
+function edit_etoile(entier){
+ vtt='<p><span class="starsBlue">';
+ for (i=0;i<5;i++){
+  if(i==entier)
+  {vtt+="</span><span class='etoilG'>";}
+ vtt+='<i class="fas fa-star"></i>';
+  }
+  vtt+="</span></p>"
+  document.write(vtt);
+  // ou un return!!!
+}
+</xmp>
+   <h2>Conclusion</h2>
+   <h2>plutot inapproprié ou hors sujet ici !</h2>
+
+
+    
+  </section>
+  
+ <section>
+   
+   <h2>Avec des before content individuels et des balises fantaisistes (b) : b class="starsG1"... ou "starsB1"</h2>
+
+<p><b class="starsG1"></b><b class="starsG1"></b><b class="starsG1"></b><b class="starsG1"></b><b class="starsG1"></b></p>
+
+<p><b class="starsB1"></b><b class="starsG1"></b><b class="starsG1"></b><b class="starsG1"></b><b class="starsG1"></b></p>
+<p><b class="starsB1"></b><b class="starsB1"></b><b class="starsG1"></b><b class="starsG1"></b><b class="starsG1"></b></p>
+<p><b class="starsB1"></b><b class="starsB1"></b><b class="starsB1"></b><b class="starsG1"></b><b class="starsG1"></b></p>
+<p><b class="starsB1"></b><b class="starsB1"></b><b class="starsB1"></b><b class="starsB1"></b><b class="starsG1"></b></p>
+<p><b class="starsB1"></b><b class="starsB1"></b><b class="starsB1"></b><b class="starsB1"></b><b class="starsB1"></b></p>
+
+  <h2>Exemple pour 4 étoiles bleu : </h2>
+ <xmp>
+  <p><b class="starsB1"></b>
+  <b class="starsB1"></b>
+  <b class="starsB1"></b>
+  <b class="starsB1"></b>
+  <b class="starsG1"></b></p>
+   
+ </xmp>
+ <h2>Conclusion</h2>
+   <h2>Pas idiot mais oblige le back office à faire une boucle de programmation</h2>
+ </section>
+  
+  <section>
+    <h2> ici on combine le before et le after: cad , donc le bleu puis le gris... </h2>
+<div class="star0"></div>
+<div class="star1"></div>
+<div class="star2"></div>
+<div class="star3"></div>
+<div class="star4"></div>
+<div class="star5"></div>
+    <h2>Exemple pour 2 étoiles bleu : </h2>
+ <xmp>
+   <div class="star2"></div>
+   </xmp>
+   <h2>Conclusion</h2>
+   <h2>facile pour le back office, tres conçis peut etre trop!</h2>
+  </section>
+  <section id="section4">
+    <h2>Ici en utilisant les nth-child(1) , un à 5 des css, cad un compteur qui pilote la couleur (cf. les tableaux avec rows paires et impaires)..</h2>
+    <div class="toil0 ">
+                             <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+		                        
+		                        
+</div>
+    <div class="toil1 ">
+                             <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+		                        
+		                        
+</div>
+<div class="toil2 ">
+                             <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+		                        
+		                        
+</div>
+    
+   <div class="toil3 ">
+                             <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+		                        
+		                        
+</div>
+<div class="toil4 ">
+                             <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+		                        
+		                        
+</div>
+<div class="toil5 ">
+                             <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+		                        
+		                        
+</div>
+<h2>Exemple pour 3 étoiles bleu : </h2>
+ <xmp>
+   <div class="toil3 ">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+     <i class="fas fa-star"></i>
+    </div>
+   
+   
+ </xmp>
+ <h2>Conclusion</h2>
+   <h2>facile pour le back office, très simple à lire en hml..beaucoup de lignes mais probablement le meilleur compromis!</h2>
+    
+  </section>
+  
+</main>
+ <h2>Conclusion</h2>
+   <h2>Petit exercice ou Tp un peu hors sujet mais qui m'a permis de découvrit les after, before et les les nth-child(...)!</h2>
+<xmp>
+  .star0:after {font-family: 'Font Awesome 5 Free';color:grey;font-weight: 900;content: "\f005\f005\f005\f005\f005";}
+.star1:after {font-family: 'Font Awesome 5 Free';color:grey;font-weight: 900;content: "\f005\f005\f005\f005";}
+.star2:after {font-family: 'Font Awesome 5 Free';color:grey;font-weight: 900;content: "\f005\f005\f005";}
+.star3:after {font-family: 'Font Awesome 5 Free';color:grey;font-weight: 900;content: "\f005\f005";}
+.star4:after {font-family: 'Font Awesome 5 Free';color:grey;font-weight: 900;content: "\f005";}
+
+.star5:before {font-family: 'Font Awesome 5 Free';color:#0065FC;font-weight: 900;content: "\f005\f005\f005\f005\f005";}
+.star4:before {font-family: 'Font Awesome 5 Free';color:#0065FC;font-weight: 900;content: "\f005\f005\f005\f005";}
+.star3:before {font-family: 'Font Awesome 5 Free';color:#0065FC;font-weight: 900;content: "\f005\f005\f005";}
+.star2:before {font-family: 'Font Awesome 5 Free';color:#0065FC;font-weight: 900;content: "\f005\f005";}
+.star1:before {font-family: 'Font Awesome 5 Free';color:#0065FC;font-weight: 900;content: "\f005";}
+</xmp>
+<h2>Ce n'est pas une réussite mais au départ je ne pensais pas etre capable d'écrire un truc aussi illisible que cela!</h2>
+</body>
+</html>

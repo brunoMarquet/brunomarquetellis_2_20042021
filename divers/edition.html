@@ -1,0 +1,335 @@
+<html lang="fr">
+  
+  <head>
+   
+      <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+       <link rel="icon" href="../favicon.ico" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>edition</title>
+    
+    <style>
+    header{
+      display: flex ;
+       justify-content:space-evenly;
+       align-items:center;
+       padding: 15px;
+      border: 1px solid #0065FC;
+      border-radius: 0 10px;
+    }
+
+main{
+
+   display: flex;
+   width: 100%;
+gap: 20%;
+ 
+}
+
+
+
+
+section {
+ 
+  flex: 40%;
+  padding: 15px;
+ margin: 10px;
+  border: 1px solid #0065FC;
+  border-radius: 10px;
+  border-radius:  0 10px 0 0;
+  
+}
+article{
+  
+  padding: 5px;
+ margin: 5px;
+ margin-top: 15px;
+  border-left: 1px solid #0065FC;
+  border-bottom: 1px solid #0065FC;
+  border-radius:  10px  0 10px 10px;
+  
+  
+}
+
+.varA{ background:chocolate;}
+.varR{ background: yellow;}
+
+    </style>
+  </head>
+  
+  <body>
+    
+<script>
+    
+var p_hotel=[];
+     h1=["marcus-loke-WQJvWU_HZFo-unsplash.jpg","Photo auberge la Cannebière","Auberge La Cannebière",25,3];
+p_hotel.push(h1);
+h1=["fred-kleber-gTbaxaVLvsg-unsplash.jpg","Photo Hôtel du port","Hôtel du port",52,2];
+p_hotel.push(h1);
+
+h1=["reisetopia-B8WIgxA_PFU-unsplash.jpg","Photo Hôtels des mouettes","Hôtels des mouettes",76,4];
+p_hotel.push(h1);
+
+h1=["annie-spratt-Eg1qcIitAuA-unsplash.jpg","Photo Hôtel de la mer","Hôtel de la mer",46,1];
+p_hotel.push(h1);
+
+h1=["nicate-lee-kT-ZyaiwBe0-unsplash.jpg","Photo Auberge le panier","Auberge le panier",23,2];
+p_hotel.push(h1);
+
+h1=["febrian-zakaria-M6S1WvfW68A-unsplash.jpg","Photo Hôtels chez Amina","Hôtels chez Amina",96,3];
+p_hotel.push(h1);
+
+var p_activ=[];
+ 
+ v=["reno-laithienne-QUgJhdY5Fyk-unsplash.jpg","photo du Port de Marseille","Port de Marseille"];
+  p_activ.push(v);
+ v=["paul-hermann-QFTrLdQIRhI-unsplash.jpg","photo du Fort de Pomègues","Fort de Pomègues"];
+  p_activ.push(v);
+  v=["kevin-hikari-rV_Qd1l-VXg-unsplash.jpg","Photo des Iles du Frioul","Iles du Frioul"];
+  p_activ.push(v);
+  v=["kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg","Photo Parc National des Calanques","Parc National des Calanques"];
+  p_activ.push(v);
+  v=["florian-wehde-xW9e8gdotxI-unsplash.jpg","Photo de Notre-Dame-de-la-Garde","Notre-Dame-de-la-Garde"];
+  p_activ.push(v);
+  v=["lena-paulin-wH2-EJoDcV0-unsplash.jpg","Photo du Parc de Longchamp","Parc de Longchamp"];
+  p_activ.push(v);
+  
+ var p_hotel_pop=[];
+
+ h2=["emile-guillemot-Bj_rcSC5XfE-unsplash.jpg","Photo Hotel Le Soleil du matin","Hotel Le Soleil du matin",128,4];
+  p_hotel_pop.push(h2);
+  h2=["aw-creative-VGs8z60yT2c-unsplash.jpg","Photo Au coeur de l'eau Chambre d'hôtes","Au coeur de l'eau Chambre d'hôtes",71,5];
+  p_hotel_pop.push(h2);
+ h2=["febrian-zakaria-sjvU0THccQA-unsplash.jpg","Photo Hotel Tout bleu et blanc","Hotel Tout bleu et blanc",68,4];
+  p_hotel_pop.push(h2);
+  
+
+function doactiv(){
+  vm=p_activ.length;
+ 
+  vtt="<!--édité le "+new Date().toLocaleString()+"-->\n\n";
+  for (j=0;j<vm;j++){
+    pactiv="";
+    image="images/activites/"+ p_activ[j][0];
+    alte= p_activ[j][1];
+    
+    
+    
+    legende=p_activ[j][2];
+    
+    vtt+=
+    `<article class="activboxH">
+        <div class="cadrephoto_3" >
+          <img src="`+image+
+    `
+          " alt="`+alte+`">
+          </div>
+              <p>`+legende+`</p>
+    </article>
+
+    `
+    
+    //'<div class="annonce1"><div class="cadrephoto4" id="acti_1"><img src="'+image+'" alt='+alte+'></div><p>'+legende+'</p></div>';
+    
+    
+  }
+  
+  vtt+="<!--fin édition-->";
+  document.getElementById("texte").innerHTML=vtt;
+  document.getElementById("info").innerHTML="Activités"
+  
+
+
+
+}
+/*
+
+div class="annonce2_text">
+  <p>Auberge de la Canebiere</p>
+    <p>nuit à partir de <strong>25€.</strong></p>
+   <div class="star5"></div>
+
+*/
+  
+function dopopu(){
+  /*modifié le 25/06 */
+  vm=p_hotel_pop.length;
+ 
+  vtt="<!--édité le "+new Date().toLocaleString()+"-->\n\n";
+  for (j=0;j<vm;j++){
+    pactiv="";
+    image="images/hotels/"+ p_hotel_pop[j][0];
+    alte= p_hotel_pop[j][1];
+    
+    
+    
+    legende=p_hotel_pop[j][2];
+prix=p_hotel_pop[j][3];
+note= p_hotel_pop[j][4];
+
+
+vtt+=`
+      <article class="annonce2">
+          <div class="cadrephoto_2"><a  href="#">
+              <img src="`+image+`"
+              alt="`+alte+`"/></a>
+          </div>
+          <div class="annonce2_text">
+              <p>`+legende+`</p>
+              <p>nuit à partir de <strong>`+prix+`€.</strong></p>
+              <div class="star`+note+` etoile"></div>
+          </div>
+     </article><!--fin de annonce2 `+j+ `-->
+
+     `
+     
+  }
+     
+   vtt+="\n<!--fin édition-->";
+
+  document.getElementById("texte").innerHTML=vtt;
+  document.getElementById("info").innerHTML="hébergement populaires"
+  
+}
+
+    
+function dohotel(){
+  
+  vm=p_hotel.length;
+ 
+  vtt="<!--édité le "+new Date().toLocaleString()+"-->\n\n";
+  for (j=0;j<vm;j++){
+    pactiv="";
+    image="images/hotels/"+ p_hotel[j][0];
+    alte= p_hotel[j][1];
+    
+    
+    
+    legende=p_hotel[j][2];
+prix=p_hotel[j][3];
+note= p_hotel[j][4];
+
+
+vtt+=`
+   
+      <article class="annonce1">
+          <div class="cadrephoto_1"><a href="#">
+              <img src="`+image+`
+              " alt="`+alte+`"/></a>
+          </div>
+          <div class="annonce1_text">
+                <p>`+legende+`</p>
+                <p>nuit à partir de <strong>`+prix+`€.</strong></p>
+                <div class="star`+note+` etoile"></div>
+          </div>
+      </article><!--fin de annonce 1 :  `+j+ `-->
+  
+     `
+  
+  }
+  
+  vtt+="<!--fin édition-->";
+  
+  document.getElementById("texte").innerHTML=vtt;
+  document.getElementById("info").innerHTML="hébergement 'normaux'"
+  
+  
+  
+}
+  
+    
+function myCopie() {
+  alert('titi');
+  var copyText = document.getElementById("texte");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+}
+
+
+ 
+  
+</script>
+ 
+<header>
+    <a href="../index.html" >
+            <img src="../images/Reservia.svg"  alt="logo de Reservia" /></a>
+    <h1>Edition</h1>
+  <a href="index_make.html" ><h2>make-up</h2></a>
+  </header>
+
+<h2>Editer dynamiquement les "3 sections"</h2>
+<main>
+,
+<section>
+  <article>
+<ul>
+  <li>les données pseudo dynamiques sont stockés dans des array, ce qui permet de rester compatible avec ultérieurement l'emploi de js ou node,de php et de java...etc</li>
+  <li>
+    structure des tableaux:h1=[image src, le "alt" associé, la légende, le prix (nombre) la note (le nombre d'etoiles)]</li>
+    <li>par exemple :["zakaria-M6S1WvfW68A-unsplash.jpg","Photo Hôtels chez Amina","Hôtels chez Amina",96,3];</li>
+    
+  
+  
+</ul>
+</article>
+<article>code :
+  <span class="varA">Acquisition </span>
+ <span class="varR">Restitution :</span><br>
+<span class="varA">image</span>="images/hotels/"+ p_hotel[j][0];<br>
+   <span class="varA">alte</span>= p_hotel[j][1];<br>
+    
+    
+    
+    <span class="varA">legende</span>=p_hotel[j][2];<br>
+<span class="varA">prix</span>=p_hotel[j][3];<br>
+<span class="varA">note</span>= p_hotel[j][4];<br>
+
+
+vtt+=`
+    &lt;!--debut annonce1 --&gt;
+      &lt;article class="annonce1"&gt;
+           &lt;div class="cadrephoto_1"&gt;&lt;a href="#"&gt;
+              &lt;img src="`+<span class="varR">image</span>+`" alt="`+<span class="varR">alte</span>+`"/&gt;&lt;/a&gt;&lt;/div&gt;<br>;<br>
+              &lt;div class="annonce1_text"&gt;
+                  &lt;p&gt;`+<span class="varR">legende</span>+`&lt;/p&gt;
+                  &lt;p&gt;nuit à partir de &lt;strong&gt;`+<span class="varR">prix</span>+`€.&lt;/strong&gt;&lt;/p&gt;
+                  &lt;div class="star`+<span class="varR">note</span>+`"&gt;&lt;/div&gt;
+              &lt;/div&gt;
+      &lt;/article&gt;
+   &lt;!--fin de annonce1 --&gt;
+  </article>
+  Acquisition :
+   <xmp> </xmp>
+ Restitution :
+     <xmp>
+    <!--debut annonce1 -->
+      <article class="annonce1">
+           <div class="cadrephoto_1"><a href="#">
+              <img src="`+image+`" alt="`+alte+`"/></a></div>
+              <div class="annonce1_text">
+                  <p>`+legende+`</p>
+                  <p>nuit à partir de <strong>`+prix+`€.</strong></p>
+                  <div class="star`+note+`"></div>
+              </div>
+      </article>
+   <!--fin de annonce1 -->
+ </xmp>
+    
+</section>
+<section>
+  <ul>
+  
+  <li><a href="#" onclick="dohotel()">hotels</a></li>
+  <li><a href="#" onclick="dopopu()">hotels populaires</a></li>
+  <li><a href="#" onclick="doactiv()">activités</a></li>
+</ul>
+ <input type="checkbox"  name="export2" value="export1">copier dans le presse papier.<br>
+  <p id="info">:</p>
+<a href="#" onclickc="myCopie()">exporter</a>
+ <textarea id="texte" rows="030" cols="100"></textarea>
+</section>
+
+</main>
+</body>
+</html>

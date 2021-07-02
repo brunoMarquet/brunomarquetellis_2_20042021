@@ -1,0 +1,208 @@
+<html lang="fr">
+  
+  <head>
+   
+      <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>form works</title>
+     
+
+<script src="https://kit.fontawesome.com/4c9a468499.js" crossorigin="anonymous"></script>
+
+
+
+        
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    
+        
+        
+
+    
+
+  <!-- <link rel="stylesheet" href="css/debug0.css"> -->
+
+  
+
+
+<style>
+    header{
+      display: flex ;
+       justify-content:space-evenly;
+       align-items:center;
+       padding: 15px;
+      border: 1px solid #0065FC;
+      border-radius: 0 10px;
+    }
+
+main{
+display: flex;
+
+  gap: 20px;
+}
+
+
+section{
+  align-self: auto;
+  flex: 30%;
+  padding: 15px;
+  margin: 10px;
+  border: 1px solid #0065FC;
+  border-radius: 10px;
+  
+}
+    
+.fas{
+  
+    display: flex;
+    color: #0065FC;
+    border:#F2F2F2 solid 2px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2px;
+    margin-right: 10px;
+}
+/*#liste_filtres */
+#liste_filtres::before {
+  content: "Filtre-1 : ";
+  color:grey;
+}
+.fictif {color:red;}
+
+.filtre{ border:#F2F2F2 solid 2px;margin:10px;padding: 10px;}
+
+ .filtre:hover{border:blue solid 2px;}
+ 
+ 
+ .filtre:hover .fas{color:green; }
+  .filtre:hover .filtre_txt{color:green; }
+ 
+ .filtre input:checked ~ .fas {
+  color: white;
+  background-color: blue;
+}
+ 
+
+ .filtre input:checked ~ .filtre_txt {
+  color: blue;text-decoration: underline blue;
+ ;
+}
+ 
+  #liste_filtres, #liste_filtres2{
+  display: flex;
+  align-items: center;
+
+  position: relative;
+  flex-flow: row wrap;
+}
+.bt_search{ border:blue solid 1px; margin 10px;padding: 10px;}
+
+.bt_search:after{
+ 
+   content: "rechercher";
+
+}
+
+
+@media only screen and (max-width: 800px) {
+ #liste_filtres::before {
+  content: "";}
+.fictif::before {
+  content:"Filtres-1 :";}
+  .bt_search{border-radius:10px;}
+  .bt_search:after{
+  font-family: 'Font Awesome 5 Free';
+   content: "\f002";
+font-weight: 900;color:#0065FC;
+  }
+}
+  
+
+ 
+  
+  
+</style>
+</head>
+<body>
+    <header>
+    <a href="../index.html" >
+            <img src="../images/Reservia.svg"  alt="logo de Reservia" /></a>
+    <h1>Formulaire ..</h1>
+  <a href="index_make.html" ><h2>make-up</h2></a>
+  </header>
+
+<h1>"form (version implémantée ...)</h1>
+
+<main>
+  
+  <section>
+    
+    <form>
+ <span class="info-logo-search">Rechercher</span>
+               
+<p>test</p>
+<input type="text" id="place" name="place" value="Fréjus"><br>
+<div class="fictif"></div>
+<div id="liste_filtres">
+<label class="filtre">
+  <input type="checkbox"  id="criteres1" name="criteres" value="cheap">
+ <i class="fas fa-money-bill-wave fa-xs icone" ></i><span class="filtre_txt">eco</span>
+</label>
+<label class="filtre">
+  <input type="checkbox" id="criteres2" name="criteres" value="family">
+ <i class="fas fa-child fa-xs icone"></i><span class="filtre_txt">famille</span>
+</label>
+<label class="filtre">
+  <input type="checkbox" id="criteres3" name="criteres" value="love">
+   <i class="fas fa-heart fa-xs icone" ></i><span class="filtre_txt">romance</span>
+</label>
+<label class="filtre">
+  <input type="checkbox" id="criteres4" name="criteres" value="pet">
+  <i class="fas fa-dog fa-xs icone" ></i><span class="filtre_txt">animaux ok</span>
+</label>
+<label class="bt_search">
+<input type="submit" id="input_search" value=""><span></span>
+</label>
+
+       </div>
+</form>
+    </section>
+    <section>
+    
+    <form>
+ <span class="info-logo-search">Rechercher</span>
+               
+<input type="text" id="place" name="place2" value="Lyon"><br>
+
+<div id="liste_filtres2">
+<div class="titre2">Filtres</div>
+  
+<label class="filtre">
+  <input type="checkbox"  id="criteres1" name="criteres" value="cheap">
+ <i class="fas fa-money-bill-wave fa-xs icone" ></i><span class="filtre_txt">eco</span>
+</label>
+<label class="filtre">
+  <input type="checkbox" id="criteres2" name="criteres" value="family">
+ <i class="fas fa-child fa-xs icone"></i><span class="filtre_txt">famille</span>
+</label>
+<label class="filtre">
+  <input type="checkbox" id="criteres3" name="criteres" value="love">
+   <i class="fas fa-heart fa-xs icone" ></i><span class="filtre_txt">romance</span>
+</label>
+<label class="filtre">
+  <input type="checkbox" id="criteres4" name="criteres" value="pet">
+  <i class="fas fa-dog fa-xs icone" ></i><span class="filtre_txt">animaux ok</span>
+</label>
+<label class="bt_search">
+<input type="submit" id="input_search" value=""><span></span>
+</label>
+
+       </div>
+</form>
+    </section>
+    </main>
+</body>
+</html>
