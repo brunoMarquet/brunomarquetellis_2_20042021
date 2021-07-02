@@ -51,6 +51,15 @@ section{
   border-radius: 10px;
   
 }
+h2{
+  font-size: 18px;
+  padding: 10px;
+  border-left: 1px solid blue;
+  border-bottom: 1px solid blue;
+   border-radius: 0 10px;
+}
+
+
     
 .fas{
   
@@ -72,19 +81,21 @@ section{
 }
 .fictif {color:red;}
 
-.filtre{ border:#F2F2F2 solid 2px;margin:10px;padding: 10px;}
+.filtre , .filtre2{ border:#F2F2F2 solid 2px;margin:10px;padding: 10px;border-radius:5px}
 
- .filtre:hover{border:blue solid 2px;}
+ .filtre:hover,.filtre2:hover{border:blue solid 2px;}
  
  
- .filtre:hover .fas{color:green; }
-  .filtre:hover .filtre_txt{color:green; }
+ .filtre:hover .fas, .filtre2:hover .fas {color:green; }
+  .filtre:hover .filtre_txt,  .filtre2:hover .filtre_txt{color:green; }
  
- .filtre input:checked ~ .fas {
+ .filtre input:checked ~ .fas,.filtre2 input:checked ~ .fas {
   color: white;
   background-color: blue;
 }
- 
+  label input:checked ~ .filtre2{background-color: #F8F8FF;}
+/*l.abel input:checked ~ .fas{background-color:red;}
+label:hover{background-color:grey;}*/
 
  .filtre input:checked ~ .filtre_txt {
   color: blue;text-decoration: underline blue;
@@ -134,34 +145,32 @@ font-weight: 900;color:#0065FC;
   <a href="index_make.html" ><h2>make-up</h2></a>
   </header>
 
-<h1>"form (version implémantée ...)</h1>
-
+<h1>"form (version actuelle ...)</h1>
+<h2>A la demande de Pierre M... (mon mentor) pour modifier la couleur de fond des filtres choisis</h2>
 <main>
   
   <section>
     
     <form>
  <span class="info-logo-search">Rechercher</span>
-               
-<p>test</p>
-<input type="text" id="place" name="place" value="Fréjus"><br>
+               <input type="text" id="place" name="place" value="Fréjus"><br>
 <div class="fictif"></div>
 <div id="liste_filtres">
 <label class="filtre">
-  <input type="checkbox"  id="criteres1" name="criteres" value="cheap">
+  <input type="checkbox"  name="criteres" value="cheap">
  <i class="fas fa-money-bill-wave fa-xs icone" ></i><span class="filtre_txt">eco</span>
 </label>
 <label class="filtre">
-  <input type="checkbox" id="criteres2" name="criteres" value="family">
+  <input type="checkbox" name="criteres" value="family">
  <i class="fas fa-child fa-xs icone"></i><span class="filtre_txt">famille</span>
 </label>
 <label class="filtre">
-  <input type="checkbox" id="criteres3" name="criteres" value="love">
+  <input type="checkbox"  name="criteres" value="love">
    <i class="fas fa-heart fa-xs icone" ></i><span class="filtre_txt">romance</span>
 </label>
 <label class="filtre">
-  <input type="checkbox" id="criteres4" name="criteres" value="pet">
-  <i class="fas fa-dog fa-xs icone" ></i><span class="filtre_txt">animaux ok</span>
+  <input type="checkbox"  name="criteres" value="pet">
+  <i class="fas fa-dog fa-xs icone" ></i><span class="filtre_txt">animaux ok<br>animaux ok<br></span>
 </label>
 <label class="bt_search">
 <input type="submit" id="input_search" value=""><span></span>
@@ -169,6 +178,17 @@ font-weight: 900;color:#0065FC;
 
        </div>
 </form>
+<h2>avec un html :</h2>
+<xmp>
+    <label class="filtre">
+        <input type="checkbox" name="criteres" value="pet">
+        <i class="fas fa-dog fa-xs icone" ></i>
+        <span class="filtre_txt">animaux ok</span>
+    </label>    
+</xmp>
+<h2>Le hic ici, c'est que l'on veut "un truc qui tourne en rond":<br>filtre input:checked ~ .filtre{background-color: grey;}</h2>
+ <h2>j'ai voulu faire l'économie d'une div avec un label, comme conteneur et finalement..!</h2>   
+    
     </section>
     <section>
     
@@ -180,28 +200,44 @@ font-weight: 900;color:#0065FC;
 <div id="liste_filtres2">
 <div class="titre2">Filtres</div>
   
-<label class="filtre">
-  <input type="checkbox"  id="criteres1" name="criteres" value="cheap">
+<label class="label2">
+  <input type="checkbox"   name="criteres" value="cheap">
+  <div class="filtre2">
  <i class="fas fa-money-bill-wave fa-xs icone" ></i><span class="filtre_txt">eco</span>
-</label>
-<label class="filtre">
-  <input type="checkbox" id="criteres2" name="criteres" value="family">
+</div></label>
+<label>
+  <input type="checkbox"  name="criteres" value="family">
+  <div class="filtre2">
  <i class="fas fa-child fa-xs icone"></i><span class="filtre_txt">famille</span>
-</label>
-<label class="filtre">
-  <input type="checkbox" id="criteres3" name="criteres" value="love">
+</div></label>
+<label>
+  <input type="checkbox"  name="criteres" value="love">
+  <div class="filtre2">
    <i class="fas fa-heart fa-xs icone" ></i><span class="filtre_txt">romance</span>
-</label>
-<label class="filtre">
-  <input type="checkbox" id="criteres4" name="criteres" value="pet">
+</div></label>
+<label>
+  <input type="checkbox"  name="criteres" value="pet">
+  <div class="filtre2">
   <i class="fas fa-dog fa-xs icone" ></i><span class="filtre_txt">animaux ok</span>
-</label>
+</div></label>
 <label class="bt_search">
 <input type="submit" id="input_search" value=""><span></span>
 </label>
 
        </div>
 </form>
+<h2>donc obligé de créer un conteneur -filtre2- à l'intérieur du label :</h2>
+<xmp>
+<label>
+    <input type="checkbox"  name="criteres" value="love">
+    <div class="filtre2">
+        <i class="fas fa-heart fa-xs icone" ></i>
+        <span class="filtre_txt">romance</span>
+    </div>
+</label>
+</xmp>
+<h2>avec :  label input:checked ~ .filtre2{background-color: #F8F8FF;}</h2>
+<h2>après il suffit de masquer les checkbox et les submit !(opacity,width,height)</h2>
     </section>
     </main>
 </body>
