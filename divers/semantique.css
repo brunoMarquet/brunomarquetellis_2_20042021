@@ -27,6 +27,7 @@ section:before{
 }
 
 main{outline: solid 4px rgba(255, 0, 0, 0.6);}
+
 main:before{
     content: 'balise main';
     color: red;
@@ -62,9 +63,21 @@ nav:before{
   
 }
 aside{border: 1px red solid;}
+
 aside:before{
     content: 'balise aside';
     color: red;
     
   
 }
+form{border: 1px olive solid;
+  background-color: #F8F8FF;
+}
+form:before{
+    content: 'balise form';
+    color: olive;
+  
+}
+
+
+

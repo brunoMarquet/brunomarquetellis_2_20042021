@@ -113,10 +113,10 @@ label:hover{background-color:grey;}*/
 
 .bt_search:after{
  
-   content: "rechercher";
+   content: "Rechercher";
 
 }
-
+.titre2B{display:none;}
 
 @media only screen and (max-width: 800px) {
  #liste_filtres::before {
@@ -128,6 +128,10 @@ label:hover{background-color:grey;}*/
   font-family: 'Font Awesome 5 Free';
    content: "\f002";
 font-weight: 900;color:#0065FC;
+  }
+  .titre2 {display:none;}
+  .titre2B {display:inline;
+    color:blue;
   }
 }
   
@@ -146,8 +150,8 @@ font-weight: 900;color:#0065FC;
   </header>
 
 
-<h2>Pour approfondir les actions entre label et form.<br>A la demande de Pierre M... (mon mentor) pour modifier la couleur de fond des filtres choisis<br>"+le bouton rechercher en responsible"
-<br> + Filtres en responsible</h2>
+<h2>Pour approfondir les actions entre label et form.<br>A la demande de Pierre M... (mon mentor) pour modifier la couleur de fond des filtres choisis<br>+ "le bouton rechercher" en responsible"
+<br> + "Filtres" en responsible (2 mauvaises méthodes ici le display et l'after</h2>
 <main>
   
   <section>
@@ -187,9 +191,9 @@ font-weight: 900;color:#0065FC;
         <span class="filtre_txt">animaux ok</span>
     </label>
 </xmp>
-<h2>Le hic ici, c'est que l'on veut "un truc qui tourne en rond":<br>filtre input:checked ~ .filtre{background-color: grey;}</h2>
- <h2>j'ai voulu faire l'économie d'une div avec un label, comme conteneur et finalement..!</h2>
-    
+<h2>Le hic ici, c'est que l'on veut "un truc qui tourne en rond":<br>filtre input:checked ~ .filtre{background-color: grey;}<br>
+ j'ai voulu faire l'économie d'une div avec un label, comme conteneur et finalement..!</h2>
+
     </section>
     <section>
     
@@ -197,9 +201,9 @@ font-weight: 900;color:#0065FC;
  <span class="info-logo-search">Rechercher</span>
                
 <input type="text" id="place" name="place2" value="Lyon"><br>
-
+<div class="titre2B">Filtres-BB</div>
 <div id="liste_filtres2">
-<div class="titre2">Filtres</div>
+<div class="titre2">Filtres-B</div>
   
 <label class="label2">
   <input type="checkbox"   name="criteres" value="cheap">
