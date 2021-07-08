@@ -2,37 +2,7 @@
 Bleu                             #0065FC
   Bleu clair                      #DEEBFF
   Gris                             #F2F2F2
-test bof:
-h1 h2{color: blue;}
-h2 h3{color: red;}
-ressource: hoverhttps://yesyouweb.com/transitions-css3/
 
-[class~=star] à tester
-[title~=flower]
-
-
-
-.fa, .fas {
-    font-weight: 900;
-    .annonce1::before{
-  
-  content:"hotel : " counter(myIndex) url("../images/Reservia.svg")
-}
-
- }
-
-#city_hotels  {
-   
-   flex:66%;
-   flex-direction:row;
-  
-  border-radius: 20px;
-  background:#F2F2F2;
-  padding: 20px;
-   min-height:400px;
-     }
-     
-   
    
 */
 
@@ -163,37 +133,40 @@ header nav a:hover{
 
 ________________formulaire _________________*/
 
-/*#liste_filtres */
-/* #liste_filtres::before {
-  content: "Filtres : ";
-  font-size: 1.1em;
-  	margin-left: 0;
-  	margin-top: 0px;
-}
-*/
+
 .titre_filtre {font-size: 1.2em;
   font-weight: bold;
-  
 }
+
+
+#lieux {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 15px;
+    border-color: transparent;
+    font-size: 1.3em;
+}
+#lieux:focus {
+  border-color: blue;
+  }
+  
+  
+  
 
 .filtre .fas{
-    display: flex;
+   display: flex;
+    width: 42px;
+    height: 42px;
+    margin-left:-2px;
     color: #0065FC;
-    width: 43px;
-    height: 43px;
-    align-items: center;
+    background-color: #DEEBFF;
+    align-items: center;left:;
     justify-content: center;
     font-size: 1rem;
+   
+  border-radius: 50%;
 }
 
-#place {
-  border-color: transparent;
-  font-size: 1.3em;
-}
-#place:focus {
-  border-color: blue;
-  
-}
 
 .fa-map-marker-alt {
   padding: 13px 15px;
@@ -215,26 +188,20 @@ ________________formulaire _________________*/
   border: 1px solid #f2f2f2;
   border-radius: 50%;
 }
-.bt_search:after{
- 
-   content: "Rechercher";
-
-}
 
 
 .bt_search {
-  padding: 13px 15px;
+  padding: 13px 13px;
   font-size: 1em;
   color: white;
-
   background-color: #0065fc;
-  /*border: 1px solid transparent;
-  c'etait necessaire lorsqu'onutisisait un submitt
-  */
   border-radius: 0 15px 15px 0;
   cursor: pointer;
 }
 
+.bt_search:after{
+  content: "Rechercher";
+}
 .bt_search:hover{box-shadow: 0px 0px 2px #000000;}
 
 .fa,
@@ -242,43 +209,27 @@ ________________formulaire _________________*/
   font-weight: 900;
 }
 
-.filtre .fas{
-    display: flex;
-    color: #0065FC;
-    background-color: #DEEBFF;
-    width: 43px;
-    height: 43px;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    /*border: 1px solid #f2f2f2;*/
-  border-radius: 50%;
-}
+
 
 #liste_filtres {
   display: flex;
   align-items: center;
-
   position: relative;
   flex-flow: row wrap;
+ }
  
-  
-
-  /*
-   height: 36px; betise ds ce cas!important
-  margin: 15px 0 30px 0;
-  */
-}
 .filtre {
   display: flex;
   align-items: center;
   border: #f2f2f2 solid 2px;
-  height: 43px;
-  border-radius: 45px;
-  margin-left: 30px;
-  padding-right: 30px;
-  margin-top: 10px;
+  height: 44px;
+  border-radius:22px;
+  margin-left: 25px;
+ margin-top: 10px;
   margin-bottom: 10px;
+  padding-right: 30px;
+  
+  /* counter-increment: numero_f; */
   cursor: pointer;
 }
 
@@ -286,8 +237,9 @@ ________________formulaire _________________*/
   .filtre:hover{border:#0065fc solid 2px;}
   
   .filtre:hover .fas,
-  .filtre input:checked  ~ .fas{color: white;
-  background-color: #0065fc;}
+  .filtre input:checked  ~ .fas{
+    color: white;
+    background-color: #0065fc;}
   
   .filtre:hover .filtre_txt{color:#0065fc;}
  
@@ -295,12 +247,26 @@ ________________formulaire _________________*/
      background-color: red;
  }*/
 
- .filtre input:checked  ~ .filtre_txt {
+ input:checked  ~ .filtre_txt {
   color: #0065fc;text-decoration: underline #0065fc;
  }
  
 
-.filtre input ,#input_search{
+
+    
+ /* filtre version 1
+ input:checked ~ .filtre{
+  background-color: #DEEBFF;
+  border:#0065fc solid 2px;
+}
+input:checked ~ .filtre.fas{
+    border:#0065fc solid 2px;
+}
+ 
+ 
+ BUG à venir !important!important!important
+ */
+.filtre input ,#input_search, label input{
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -430,7 +396,7 @@ ________________________________________________
 }
 
 /*____________________________________________
-____________________________ hotel normaux
+____________________________ "hotel normaux"
 ________________________________________________
 
 */
@@ -459,15 +425,13 @@ ________________________________________________
 }
 .annonce1:hover{cursor: pointer;}
 .annonce1_text {
-
 display: flex;
 flex-direction:column;
 /*justify-content: flex-start;
 line-height: 1px;
 */
-
 margin-left: 12px;
-  margin-top: 6px;
+  margin-top: 0px;
 }
 
 /*____________________________________________
@@ -479,13 +443,12 @@ ________________________________________________
 
 .annonce2 {
   display: flex;
-
   margin: 10px;
   border: 5px solid #fff;
   border-radius: 24px;
-  
   width: 90%;
-  height: 140px;
+  max-width: 320px;
+  /*height: 140px;*/
   background: white;
   box-shadow: 0px 0px 4px #000000;
 }
@@ -500,6 +463,25 @@ ________________________________________________
   
   margin-top: 0px;
 }
+
+
+/*________________________________________________
+                gestion des étoiles
+                .etoile0 .fa-star{color: grey;}
+__________________________________________________*/
+
+.les_etoiles{ font-size: 0.7em;
+    color: grey;
+}
+
+
+
+.etoile1 .fa-star:nth-child(1){color: #0065FC;}
+
+.etoile2 .fa-star:nth-child(1),.etoile2 .fa-star:nth-child(2) {color: #0065FC;}
+.etoile3 .fa-star:nth-child(1), .etoile3 .fa-star:nth-child(2), .etoile3 .fa-star:nth-child(3){color: #0065FC;}
+.etoile4 .fa-star:nth-child(1), .etoile4 .fa-star:nth-child(2), .etoile4 .fa-star:nth-child(3),.etoile4 .fa-star:nth-child(4){color: #0065FC;}
+.etoile5 .fa-star{color: #0065FC;}
 /*____________________________________________
 ____________________________ Activité
 ________________________________________________
@@ -540,12 +522,10 @@ ________________________________________________
   background: #f2f2f2;
   box-shadow: 0px 0px 4px #000000;
   cursor: pointer;
-  
+   transition: background-color 0.2s;
 }
-.activboxH:hover p {
-  color: #0065fc;
-  transition: background-color 0, 2s;
-}
+
+.activboxH h3{padding-left: 20px}
 
 
 
@@ -556,10 +536,10 @@ ________________________________________________
   padding:0px; */
 }
 
-.annonce1_text p + p,.annonce2_text  p + p{
-  color: grey;
+.annonce1_text p ,.annonce2_text  p{
+  
   font-size: 0.8em;
-  margin: 0px;
+  margin-top: -12px;
   padding:0px;
 }
 .annonce1_text strong, .annonce2_text strong {
@@ -573,10 +553,7 @@ ________________________________________________
 
 }
 
-.annonce2_text  p + p{
- 
-  padding-bottom: 30px;
-}
+
 
 
 footer {
@@ -585,7 +562,7 @@ footer {
   justify-content: space-between;
   padding-right: 40px;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 20px;
 }
 
 footer .foot_txt {
@@ -602,10 +579,14 @@ footer .foot_txt {
 
 footer h4 {
    padding-left: 36px;
+  
 }
 footer li {
  list-style-type: none;
   cursor: pointer;
+}
+footer li:hover{
+color: #0065FC;
 }
 
 
@@ -639,8 +620,9 @@ _____________________*/
   min-width: 160px;
 }
   
+  main {flex-wrap: wrap-reverse}
  #city_hotelspopu {
-    order: -2;
+   
     width: 100%;
     margin-left: 0px;
     margin-bottom: 10px;
@@ -654,14 +636,30 @@ _____________________*/
 ----------- @media query
 _____________________*/
 
+@media only screen and (max-width: 767px) {
+  
+  .annonce2 {
+    min-width:330px;
+  }
+  .activboxH  {
+  min-width: 90%px;
+}
+  
+}
+/*_____________________
 
+----------- @media query
+_____________________*/
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   
  header nav{width:100%;
-   justify-content:space-evenly;
+   justify-content:center;
  }
  
+ header nav a{
+   width:100%;
+ }
  
 .subscribe {
     order: 2;
@@ -670,9 +668,12 @@ _____________________*/
     order: 3;
   }
   
-  header nav{width:100%;}
+  header nav{
+    color:red;
+    width:100%;}
   
  header nav a{
+   width:50%;  
 border-bottom: 1px solid transparent;
      }
      
@@ -680,7 +681,8 @@ border-bottom: 1px solid transparent;
   
   /*--------manip formulaire-------------*/
 
- 
+ .titre_filtre {width:100%;}
+
  .bt_search{border-radius:15px; }
   
  .bt_search:after{
@@ -688,97 +690,49 @@ border-bottom: 1px solid transparent;
    content: "\f002";
 font-weight: 900;color:white;
   }
-   #city_activ {padding-left:0px;margin-left:0px;}/*De base?*/
   
-.titre_filtre {width:100%;}
+  
+   #city_activ {padding-left:0px;margin-left:0px;}/*De base?*/
+   
+ 
+  
 
-  .activboxH {
-     min-width: 100%;
-    width: 400px;
-  height: 170px;
+  
+  
+}
+
+@media only screen and (max-width: 450px) {
+ /* body{
+      Betise_____
+     padding-left: 0px;
+  } */
+  
+  #city_hotelspopu, footer {
+      margin-left:-15px;
+      width:100%;
   }
   
+   
+  
+  .annonce2,.annonce1 {
+    width:90%;}
+  #lieux {
+    width: 150px;
+   padding-left: 5px;
+ font-size: 1em;
+}
+.filtre{
+ padding-left: 2px;
+ font-size: 0.8em;   
+    }
+
+
+footer{
+        /*flex-direction: column;*/
+    }
+/*.numero_f()*/
   
 }
 
 
 
-
-
-
-/*_____________________
-
-etoile à modif
-_____________________*/
-
-.star0:after {
-  font-family: "Font Awesome 5 Free";
-  color: grey;
-  font-weight: 900;
-  font-size: 0.7em;
-  content: "\f005\f005\f005\f005\f005";
-}
-.star1:after {
-  font-family: "Font Awesome 5 Free";
-  color: grey;
-  font-weight: 900;
-  font-size: 0.7em;
-  content: "\f005\f005\f005\f005";
-}
-.star2:after {
-  font-family: "Font Awesome 5 Free";
-  color: grey;
-  font-weight: 900;
-  font-size: 0.7em;
-  content: "\f005\f005\f005";
-}
-.star3:after {
-  font-family: "Font Awesome 5 Free";
-  color: grey;
-  font-weight: 900;
-  font-size: 0.7em;
-  content: "\f005\f005";
-}
-.star4:after {
-  font-family: "Font Awesome 5 Free";
-  color: grey;
-  font-weight: 900;
-  font-size: 0.7em;
-  content: "\f005";
-}
-
-.star5:before {
-  font-family: "Font Awesome 5 Free";
-  color: #0065fc;
-  font-weight: 900;
-  font-size: 0.7em;
-  content: "\f005\f005\f005\f005\f005";
-}
-.star4:before {
-  font-family: "Font Awesome 5 Free";
-  color: #0065fc;
-  font-weight: 900;
-  font-size: 0.7em;
-  content: "\f005\f005\f005\f005";
-}
-.star3:before {
-  font-family: "Font Awesome 5 Free";
-  color: #0065fc;
-  font-weight: 900;
-  font-size: 0.7em;
-  content: "\f005\f005\f005";
-}
-.star2:before {
-  font-family: "Font Awesome 5 Free";
-  color: #0065fc;
-  font-weight: 900;
-  font-size: 0.7em;
-  content: "\f005\f005";
-}
-.star1:before {
-  font-family: "Font Awesome 5 Free";
-  color: #0065fc;
-  font-weight: 900;
-  font-size: 0.7em;
-  content: "\f005";
-}
