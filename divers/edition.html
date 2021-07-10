@@ -59,6 +59,7 @@ article{
   <body>
     
 <script>
+//___________________________________________________________________
     
 var p_hotel=[];
      h1=["marcus-loke-WQJvWU_HZFo-unsplash.jpg","Photo auberge la Cannebière","Auberge La Cannebière",25,3];
@@ -102,6 +103,7 @@ var p_activ=[];
  h2=["febrian-zakaria-sjvU0THccQA-unsplash.jpg","Photo Hotel Tout bleu et blanc","Hotel Tout bleu et blanc",68,4];
   p_hotel_pop.push(h2);
   
+//___________________________________________________________________
 
 function doactiv(){
   vm=p_activ.length;
@@ -117,13 +119,13 @@ function doactiv(){
     legende=p_activ[j][2];
     
     vtt+=
-    `<article class="activboxH">
+    `<article><a href="#"> <div class="activboxH">
         <div class="cadrephoto_3" >
           <img src="`+image+
     `
           " alt="`+alte+`">
           </div>
-              <p>`+legende+`</p>
+              <h3>`+legende+`</h3></div></a>
     </article>
 
     `
@@ -168,17 +170,26 @@ note= p_hotel_pop[j][4];
 
 
 vtt+=`
+      <a  href="#">
       <article class="annonce2">
-          <div class="cadrephoto_2"><a  href="#">
-              <img src="`+image+`"
-              alt="`+alte+`"/></a>
+          <div class="cadrephoto_2">
+              <img src="`+image+`" alt="`+alte+`"/>
           </div>
           <div class="annonce2_text">
-              <p>`+legende+`</p>
+              <h3>`+legende+`</h3>
               <p>nuit à partir de <strong>`+prix+`€.</strong></p>
-              <div class="star`+note+` etoile"></div>
+              
+              
+               <div class="les_etoiles etoile`+note+` ">
+                             <i class="fas fa-star"></i>
+                             <i class="fas fa-star"></i>
+                             <i class="fas fa-star"></i>
+                             <i class="fas fa-star"></i>
+                             <i class="fas fa-star"></i>
+		          </div>
           </div>
-     </article><!--fin de annonce2 `+j+ `-->
+     </article>
+     </a><!--fin de annonce2 `+j+ `-->
 
      `
      
@@ -191,6 +202,7 @@ vtt+=`
   
 }
 
+//___________________________________________________________________
     
 function dohotel(){
   
@@ -211,16 +223,22 @@ note= p_hotel[j][4];
 
 vtt+=`
    
-      <article class="annonce1">
-          <div class="cadrephoto_1"><a href="#">
+      <article class="annonce1"><a href="#">
+          <div class="cadrephoto_1">
               <img src="`+image+`
-              " alt="`+alte+`"/></a>
+              " alt="`+alte+`"/>
           </div>
           <div class="annonce1_text">
-                <p>`+legende+`</p>
+                <h3>`+legende+`</h3>
                 <p>nuit à partir de <strong>`+prix+`€.</strong></p>
-                <div class="star`+note+` etoile"></div>
-          </div>
+                 <div class="les_etoiles etoile`+note+` ">
+                             <i class="fas fa-star"></i>
+                             <i class="fas fa-star"></i>
+                             <i class="fas fa-star"></i>
+                             <i class="fas fa-star"></i>
+                             <i class="fas fa-star"></i>
+		          </div>
+          </div></a>
       </article><!--fin de annonce 1 :  `+j+ `-->
   
      `
@@ -247,7 +265,7 @@ function myCopie() {
 }
 
 
- 
+ //___________________________________________________________________
   
 </script>
  
@@ -306,7 +324,8 @@ vtt+=`
     <!--debut annonce1 -->
       <article class="annonce1">
            <div class="cadrephoto_1"><a href="#">
-              <img src="`+image+`" alt="`+alte+`"/></a></div>
+              <img src="`+image+`"
+              alt="`+alte+`"/></a></div>
               <div class="annonce1_text">
                   <p>`+legende+`</p>
                   <p>nuit à partir de <strong>`+prix+`€.</strong></p>
@@ -327,7 +346,7 @@ vtt+=`
  <input type="checkbox"  name="export2" value="export1">copier dans le presse papier.<br>
   <p id="info">:</p>
 <a href="#" onclickc="myCopie()">exporter</a>
- <textarea id="texte" rows="030" cols="100"></textarea>
+ <textarea id="texte" rows="40" cols="100"></textarea>
 </section>
 
 </main>
