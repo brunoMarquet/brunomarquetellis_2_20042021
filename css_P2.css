@@ -1,5 +1,5 @@
 /*
-Bleu                             #0065FC
+Bleu                              var(--color_bleu_1);
   Bleu clair                      #DEEBFF
   Gris                             #F2F2F2
 
@@ -11,7 +11,9 @@ Bleu                             #0065FC
 /* ____________ à deplacer___________*/
 
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
-
+:root {
+  --color_bleu_1: #0065fc;
+}
 body {
   max-width: 1280px;
   margin: 0 auto;
@@ -41,31 +43,22 @@ h2 {
   font-size: 1.5em;
 }
 h3 {
- /* padding-left: 25px;*/
- margin-top: 8px;
+  /* padding-left: 25px;*/
+  margin-top: 8px;
   font-size: 1.05em;
 }
 h5 {
   padding-left: 25px;
   font-size: 1.2em;
 }
+h5:hover {
+  cursor: pointer;
+  color: var(--color_bleu_1);
+}
 
 * {
   box-sizing: border-box;
 }
-
-/*_________________________________________
-
-________________header _________________
-*/
-
-*_________________________________________
-
-
-
-________________header _________________
-*/
-
 
 /*pbme back-up -redondance*/
 
@@ -76,12 +69,12 @@ header nav a,
   margin-right: 1em;
   padding-top: 1em;
   border-top: 1px solid transparent;
- }
+}
 
 header nav a:hover,
 .navinscrire:hover {
-  border-top: 1px solid #0065fc;
-  color: #0065fc;
+  border-top: 1px solid var(--color_bleu_1);
+  color: var(--color_bleu_1);
 }
 
 .navCAtegory {
@@ -124,15 +117,16 @@ header a:hover {
 }
 
 header nav a:hover {
-  border-top: 1px solid #0065fc;
-  color: #0065fc;
+  border-top: 1px solid var(--color_bleu_1);
+  color: var(--color_bleu_1);
 }
-
 
 .info_dispo,
 h1 ~ p,
 form,
-header img{ margin-left: 15px; }
+header img {
+  margin-left: 15px;
+}
 
 /*_________________________________________
 
@@ -159,7 +153,7 @@ ________________formulaire _________________*/
   width: 42px;
   height: 42px;
   margin-left: -2px;
-  color: #0065fc;
+  color: var(--color_bleu_1);
   background-color: #deebff;
   align-items: center;
   justify-content: center;
@@ -180,7 +174,7 @@ ________________formulaire _________________*/
   padding: 4px;
   margin-right: 8px;
   width: 15px;
-  color: #0065fc;
+  color: var(--color_bleu_1);
   height: 15px;
   /*
     */
@@ -193,7 +187,7 @@ ________________formulaire _________________*/
   padding: 13px 13px;
   font-size: 1em;
   color: white;
-  background-color: #0065fc;
+  background-color: var(--color_bleu_1);
   border-radius: 0 15px 15px 0;
   cursor: pointer;
 }
@@ -233,17 +227,17 @@ ________________formulaire _________________*/
 }
 
 .filtre:hover {
-  border: #0065fc solid 2px;
+  border: var(--color_bleu_1) solid 2px;
 }
 
 .filtre:hover .fas,
 .filtre input:checked ~ .fas {
   color: white;
-  background-color: #0065fc;
+  background-color: var(--color_bleu_1);
 }
 
 .filtre:hover .filtre_txt {
-  color: #0065fc;
+  color: var(--color_bleu_1);
 }
 
 /* .filtre input:checked  ~ .filtre {
@@ -251,21 +245,21 @@ ________________formulaire _________________*/
  }*/
 
 input:checked ~ .filtre_txt {
-  color: #0065fc;
-  text-decoration: underline #0065fc;
+  color: var(--color_bleu_1);
+  text-decoration: underline var(--color_bleu_1);
 }
 
 /* filtre version 1
  input:checked ~ .filtre{
   background-color: #DEEBFF;
-  border:#0065fc solid 2px;
+  border: var(--color_bleu_1); solid 2px;
 }
 input:checked ~ .filtre.fas{
-    border:#0065fc solid 2px;
+    border: var(--color_bleu_1); solid 2px;
 }
  
  
- BUG à venir !important!important!important
+ !!!! à venir !important!important!important
  */
 .filtre input,
 #input_search,
@@ -286,7 +280,7 @@ liste_filtres p {
 }
 .fa-info {
   display: flex;
-  color: #0065fc;
+  color: var(--color_bleu_1);
   border: #f2f2f2 solid 2px;
   width: 25px;
   height: 25px;
@@ -351,11 +345,15 @@ main {
 
 #city_activ {
   /*border: 1px solid blue; */
+
+  /* padding-left: 0px;
+  margin-left: 0px;*/
+
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-left: 50px;
-  height: 400px;
+  margin-left: 0px;
+  height: 540px;
   padding: 10px;
 }
 
@@ -379,7 +377,7 @@ ________________________________________________
   overflow: hidden;
 }
 .cadrephoto_3 {
-    height: 120px;
+  height: 120px;
   /*   flex:80%;
  
   width: 240px*/
@@ -408,7 +406,7 @@ ________________________________________________
   padding: 10px;
 }
 
-.annonce1 {
+.annonce_1 {
   display: flex;
   flex-direction: column;
 
@@ -422,10 +420,10 @@ ________________________________________________
   flex: 1;
   min-width: 240px;
 }
-.annonce1:hover {
+.annonce_1:hover {
   cursor: pointer;
 }
-.annonce1_text {
+.annonce_1_text {
   display: flex;
   flex-direction: column;
   /*justify-content: flex-start;
@@ -444,27 +442,27 @@ ________________________________________________
   margin-left: 40px;
 }
 
-.annonce2 {
+.annonce_2 {
   display: flex;
   margin: 10px;
   border: 5px solid #fff;
   border-radius: 24px;
   width: 90%;
-  max-width: 320px;
+  width: 340px;
   background: white;
   box-shadow: 0px 0px 5px grey;
 }
 
-.annonce2_text {
+.annonce_2_text {
   display: flex;
- flex-direction: column;
- align-items: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
   margin-left: 10px;
 
   margin-top: 0px;
 }
-.annonce2_text p {
-    height: 100%;
+.annonce_2_text p {
+  height: 100%;
 }
 
 /*________________________________________________
@@ -475,30 +473,30 @@ __________________________________________________*/
 .les_etoiles,
 .etoile0 {
   font-size: 0.7em;
-  color: rgb(217,217,217);
+  color: rgb(217, 217, 217);
 }
 
 .etoile1 .fa-star:nth-child(1) {
-  color: #0065fc;
+  color: var(--color_bleu_1);
 }
 
 .etoile2 .fa-star:nth-child(1),
 .etoile2 .fa-star:nth-child(2) {
-  color: #0065fc;
+  color: var(--color_bleu_1);
 }
 .etoile3 .fa-star:nth-child(1),
 .etoile3 .fa-star:nth-child(2),
 .etoile3 .fa-star:nth-child(3) {
-  color: #0065fc;
+  color: var(--color_bleu_1);
 }
 .etoile4 .fa-star:nth-child(1),
 .etoile4 .fa-star:nth-child(2),
 .etoile4 .fa-star:nth-child(3),
 .etoile4 .fa-star:nth-child(4) {
-  color: #0065fc;
+  color: var(--color_bleu_1);
 }
 .etoile5 .fa-star {
-  color: #0065fc;
+  color: var(--color_bleu_1);
 }
 /*____________________________________________
 ____________________________ Activité
@@ -506,60 +504,61 @@ ________________________________________________
 
 */
 
-#city_activ {
-  padding-left: 0px;
-  margin-left: 0px;
-}
-
-.activboxH {
+.annonce_3 {
   display: flex;
   flex-direction: column;
-  margin-top: 15px;
-  margin-left: 15px;
+  margin-top: 50px;
+  margin-left: 12px;
   border-radius: 20px;
   background: #fff;
-  width: 240px;
+  width: 300px;
   box-shadow: 0px 0px 2px #000000;
-  height: 100%;
-}
-/*.activboxH:nth-child(3n){ height: 100%;}*/
-.activboxH:nth-child(3n-2) .cadrephoto_3 {
-  height: 384px;}
-  
-.activboxH:nth-child(3n + 2),
-.activboxH:nth-child(3n + 3) {
-  height: calc(50% - 16px);
 }
 
-.activboxH p {
-  margin-left: 12px;
+.annonce_3:nth-child(3n-2) .cadrephoto_3 {
+  height: 400px;
 }
 
-.activboxH:hover {
+.annonce_3:nth-child(2) .cadrephoto_3 {
+  height: 183px;
+}
+.annonce_3:nth-child(3) .cadrephoto_3 {
+  height: 111px;
+}
+.annonce_3:nth-child(5) .cadrephoto_3 {
+  height: 140px;
+}
+.annonce_3:nth-child(6) .cadrephoto_3 {
+  height: 154px;
+}
+
+.annonce_3:hover {
   background: #f2f2f2;
   box-shadow: 0px 0px 4px #000000;
   cursor: pointer;
   transition: background-color 0.2s;
 }
 
-.activboxH h3 {
+.annonce_3 h3 {
+  height: 30px;
+  padding-top: 10px;
   padding-left: 20px;
 }
 
-.annonce1_text > p,
-.annonce2_text > p {
+.annonce_1_text > p,
+.annonce_2_text > p {
   font-size: 0.9em;
   line-height: 1.2;
 }
 
-.annonce1_text p,
-.annonce2_text p {
+.annonce_1_text p,
+.annonce_2_text p {
   font-size: 0.8em;
   margin-top: -18px;
   padding: 0px;
 }
-.annonce1_text strong,
-.annonce2_text strong {
+.annonce_1_text strong,
+.annonce_2_text strong {
   font-size: 0.9em;
 }
 
@@ -573,7 +572,7 @@ footer {
   background: #f2f2f2;
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 40px;
   padding-right: 40px;
   flex-wrap: wrap;
   gap: 20px;
@@ -592,49 +591,42 @@ footer li {
   cursor: pointer;
 }
 footer li:hover {
-  color: #0065fc;
+  color: var(--color_bleu_1);
 }
 
-@media only screen and (max-width: 1230px) {
-    #city_activ {
+@media only screen and (max-width: 1200px) {
+  #city_activ {
+    display: block;
+    /* width: 100%;*/
     height: auto;
-    align-items: center;
-
-    margin-left: 50px;
   }
 
+  .annonce_3 {
+    width: 430px;
+    margin-left: calc(50% - 215px);
+    /* pour un mediaq à 450? */
+  }
+}
 @media only screen and (max-width: 990px) {
- 
-
   main {
     flex-wrap: wrap-reverse;
   }
+
   #city_hotelspopu {
     width: 100%;
     margin-left: 0px;
     margin-bottom: 10px;
-    
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .annonce2 {
-    min-width: 330px;
-  }
-  .activboxH {
-    min-width: 90%;
   }
 }
 
 @media only screen and (max-width: 700px) {
-  
   .subscribe {
     order: 2;
   }
   header nav {
     order: 3;
   }
-    
+
   header nav {
     width: 100%;
     justify-content: center;
@@ -642,18 +634,30 @@ footer li:hover {
 
   header nav a {
     flex: 40%;
-     border-bottom: 1px solid transparent;
+    border-bottom: 1px solid transparent;
   }
-  
+
   header nav a:hover {
-    border-bottom: 1px solid #0065fc;
+    border-bottom: 1px solid var(--color_bleu_1);
     border-top: 1px solid transparent;
   }
+}
+@media only screen and (max-width: 450px) {
+  form {
+    margin-left: 5px;
+  }
 
-  /*--------manip formulaire-------------*/
-
-  .titre_filtre {
-    width: 100%;
+  #lieux {
+    width: 180px;
+    margin-left: 10px;
+    font-size: 1em;
+  }
+  .filtre {
+    margin-left: 8px;
+    margin-right: 0px;
+    padding-left: 2px;
+    padding-right: 14px;
+    font-size: 0.8em;
   }
 
   .bt_search {
@@ -666,48 +670,46 @@ footer li:hover {
     font-weight: 900;
     color: white;
   }
-
-  #city_activ {
-    padding-left: 0px;
-    margin-left: 0px;
+  .titre_filtre {
+    width: 100%;
   }
 }
 
 @media only screen and (max-width: 640px) {
-    
-      #city_hotelspopu {
+  #city_hotelspopu {
     border-radius: 0px;
   }
-    
+
+  /*  3 */
+  /*.cadrephoto_3 */
+  .annonce_3:nth-child(1) .cadrephoto_3,
+  .annonce_3:nth-child(2) .cadrephoto_3,
+  .annonce_3:nth-child(3) .cadrephoto_3,
+  .annonce_3:nth-child(4) .cadrephoto_3,
+  .annonce_3:nth-child(5) .cadrephoto_3,
+  .annonce_3:nth-child(6) .cadrephoto_3 {
+    /* width: 330px; */
+    height: 130px;
+  }
+  #city_activ {
+    display: block;
+
+    width: 100%;
+
+    /* align-items: center;*/
+  }
+  .annonce_3 {
+    width: 330px;
+    margin-left: calc(50% - 165px);
+  }
 }
 
-@media only screen and (max-width: 450px) {
-    /*Manque desTRUC*/
-    
-    form{margin-left: 5px}
-    #lieux{
-    width: 180px;
-    margin-left: 10px;
-    font-size: 1em;
+@media only screen and (max-width: 400px) {
+  .annonce_1,
+  .annonce_2,
+  .annonce_3 {
+    width: 290px;
+    margin-left: calc(50% - 145px);
+    /*margin -left pas certain*/
   }
-  .filtre {
-    margin-left: 10px;
-    margin-right: 0px;
-    padding-left: 2px;
-    padding-right: 16px;
-    font-size: 0.8em;
-  }
-    
-  #city_hotelspopu,
-  footer {
-    /*margin-left: -15px;*/
-    width: 100%;
-  }
-
-  .annonce2,
-  .annonce1,
-  .activboxH{
-    width: 90%;
-  }
-  
 }
