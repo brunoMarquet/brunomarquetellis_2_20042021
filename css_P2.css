@@ -6,11 +6,8 @@ Bleu                              var(--color_bleu_1);
    
 */
 
-/* ____________ à deplacer___________*/
-
-/* ____________ à deplacer___________*/
-
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
 :root {
   --color_bleu_1: #0065fc;
 }
@@ -221,8 +218,6 @@ ________________formulaire _________________*/
   margin-top: 10px;
   margin-bottom: 10px;
   padding-right: 30px;
-
-  /* counter-increment: numero_f; */
   cursor: pointer;
 }
 
@@ -240,27 +235,11 @@ ________________formulaire _________________*/
   color: var(--color_bleu_1);
 }
 
-/* .filtre input:checked  ~ .filtre {
-     background-color: red;
- }*/
-
 input:checked ~ .filtre_txt {
   color: var(--color_bleu_1);
   text-decoration: underline var(--color_bleu_1);
 }
 
-/* filtre version 1
- input:checked ~ .filtre{
-  background-color: #DEEBFF;
-  border: var(--color_bleu_1); solid 2px;
-}
-input:checked ~ .filtre.fas{
-    border: var(--color_bleu_1); solid 2px;
-}
- 
- 
- !!!! à venir !important!important!important
- */
 .filtre input,
 #input_search,
 label input {
@@ -313,23 +292,15 @@ main {
   flex-flow: row wrap;
   justify-content: space-between;
   gap: 30px;
-  /*
-  
-  margin: 0 50px;
-
-  gap: 50px;
-  oups */
 }
 
 #leshotelsBox {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  flex: 2;
   border-radius: 20px;
   background: #f2f2f2;
-
-  /*padding: 10px*/
-  flex: 2;
 }
 
 #city_hotelspopu {
@@ -344,11 +315,6 @@ main {
 }
 
 #city_activ {
-  /*border: 1px solid blue; */
-
-  /* padding-left: 0px;
-  margin-left: 0px;*/
-
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -377,10 +343,7 @@ ________________________________________________
   overflow: hidden;
 }
 .cadrephoto_3 {
-  height: 120px;
-  /*   flex:80%;
- 
-  width: 240px*/
+  height: 130px;
   border-radius: 20px 20px 0 0;
   overflow: hidden;
 }
@@ -435,7 +398,7 @@ line-height: 1px;
 
 /*____________________________________________
 ____________________________ hotel popu
-________________________________________________
+______________________________________________
 
 */
 .fa-chart-line {
@@ -680,7 +643,7 @@ footer li:hover {
     border-radius: 0px;
   }
 
-  /*  3 */
+  /*  !!!!! OUPS !!!!! */
   /*.cadrephoto_3 */
   .annonce_3:nth-child(1) .cadrephoto_3,
   .annonce_3:nth-child(2) .cadrephoto_3,
@@ -688,15 +651,11 @@ footer li:hover {
   .annonce_3:nth-child(4) .cadrephoto_3,
   .annonce_3:nth-child(5) .cadrephoto_3,
   .annonce_3:nth-child(6) .cadrephoto_3 {
-    /* width: 330px; */
     height: 130px;
   }
   #city_activ {
     display: block;
-
     width: 100%;
-
-    /* align-items: center;*/
   }
   .annonce_3 {
     width: 330px;
@@ -710,6 +669,8 @@ footer li:hover {
   .annonce_3 {
     width: 290px;
     margin-left: calc(50% - 145px);
-    /*margin -left pas certain*/
+  }
+  .annonce_3 {
+    margin-top: 15px;
   }
 }
