@@ -644,19 +644,22 @@ footer li:hover {
   }
 
   /*  !!!!! OUPS !!!!! */
-  /*.cadrephoto_3 */
+  /*.cadrephoto_3 
   .annonce_3:nth-child(1) .cadrephoto_3,
   .annonce_3:nth-child(2) .cadrephoto_3,
   .annonce_3:nth-child(3) .cadrephoto_3,
   .annonce_3:nth-child(4) .cadrephoto_3,
   .annonce_3:nth-child(5) .cadrephoto_3,
-  .annonce_3:nth-child(6) .cadrephoto_3 {
+  .annonce_3:nth-child(6) .cadrephoto_3*/
+
+  .annonce_3:nth-child(n + 1) .cadrephoto_3 {
     height: 130px;
   }
   #city_activ {
     display: block;
     width: 100%;
   }
+
   .annonce_3 {
     width: 330px;
     margin-left: calc(50% - 165px);
