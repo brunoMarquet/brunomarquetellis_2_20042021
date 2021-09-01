@@ -11,7 +11,7 @@ Bleu                              var(--color_bleu_1);
 :root {
   --color_bleu_1: #0065fc;
 }
-body {
+.wraper {
   max-width: 1280px;
   margin: 0 auto;
   position: relative;
@@ -77,7 +77,7 @@ header nav a:hover,
 .navCAtegory {
   width: 120px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 
   gap: 20px;
 }
@@ -475,7 +475,7 @@ ________________________________________________
   border-radius: 20px;
   background: #fff;
   width: 300px;
-  box-shadow: 0px 0px 2px #000000;
+  box-shadow: 3px 2px 4px 1px lightgrey;
 }
 
 .annonce_3:nth-child(3n-2) .cadrephoto_3 {
