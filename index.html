@@ -28,6 +28,7 @@
   </head>
 
   <body>
+    <div class="bidon">bidon</div>
     <div class="wraper">
       <header>
         <!-- Header -->
@@ -46,18 +47,18 @@
 
       <p>En plein centre ville ou en pleine nature</p>
 
-      <form name="rechechehotel">
-        <div id="line_search">
+      <form name="recheche_hotel">
+        <div id="ligne_recherche">
           <i class="fas fa-map-marker-alt"> </i>
 
           <input
-            type="text"
+            type="search"
             id="lieux"
             name="lieux"
             placeholder="Marseille, France"
           />
-          <label class="bt_search">
-            <input type="submit" id="input_search" value="" /><span></span>
+          <label class="bt_recherche">
+            <input type="submit" id="input_recherche" value="" /><span></span>
           </label>
         </div>
 
@@ -97,7 +98,7 @@
 
       <main id="Hebergements">
         <!--pour l'ancre et eviter une balise-->
-        <section id="leshotelsBox">
+        <section id="les_hotels_Box">
           <h2>Hébergements à Marseille</h2>
 
           <div class="les_annonces1">
@@ -105,7 +106,7 @@
 
             <article class="annonce_1">
               <a href="#">
-                <div class="cadrephoto_1">
+                <div class="cadre_photo_1">
                   <img
                     src="images/hotels/marcus-loke-WQJvWU_HZFo-unsplash.jpg
               "
@@ -114,7 +115,10 @@
                 </div>
                 <div class="annonce_1_text">
                   <h3>Auberge La Cannebière</h3>
-                  <p>nuit à partir de <strong>25€.</strong></p>
+                  <p>
+                    nuit à partir de <div class="prix" tarif="eco">25</div>
+                    <span class="devise">€</span>
+                  </p>
                   <div class="les_etoiles etoile3">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -128,7 +132,7 @@
 
             <article class="annonce_1">
               <a href="#">
-                <div class="cadrephoto_1">
+                <div class="cadre_photo_1">
                   <img
                     src="images/hotels/fred-kleber-gTbaxaVLvsg-unsplash.jpg
               "
@@ -137,7 +141,10 @@
                 </div>
                 <div class="annonce_1_text">
                   <h3>Hôtel du port</h3>
-                  <p>nuit à partir de <strong>52€.</strong></p>
+                  <p>
+                    nuit à partir de <div class="prix">52</div>
+                    <span class="devise">€</span>
+                  </p>
                   <div class="les_etoiles etoile0">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -151,7 +158,7 @@
 
             <article class="annonce_1">
               <a href="#">
-                <div class="cadrephoto_1">
+                <div class="cadre_photo_1">
                   <img
                     src="images/hotels/reisetopia-B8WIgxA_PFU-unsplash.jpg
               "
@@ -160,7 +167,10 @@
                 </div>
                 <div class="annonce_1_text">
                   <h3>Hôtels des mouettes</h3>
-                  <p>nuit à partir de <strong>76€.</strong></p>
+                  <p>
+                    nuit à partir de <div class="prix">76</div>
+                    <span class="devise">€</span>
+                  </p>
                   <div class="les_etoiles etoile4">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -174,7 +184,7 @@
 
             <article class="annonce_1">
               <a href="#">
-                <div class="cadrephoto_1">
+                <div class="cadre_photo_1">
                   <img
                     src="images/hotels/annie-spratt-Eg1qcIitAuA-unsplash.jpg
               "
@@ -183,7 +193,10 @@
                 </div>
                 <div class="annonce_1_text">
                   <h3>Hôtel de la mer</h3>
-                  <p>nuit à partir de <strong>46€.</strong></p>
+                  <p>
+                    nuit à partir de <div class="prix">46</div>
+                    <span class="devise">€</span>
+                  </p>
                   <div class="les_etoiles etoile1">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -197,7 +210,7 @@
 
             <article class="annonce_1">
               <a href="#">
-                <div class="cadrephoto_1">
+                <div class="cadre_photo_1">
                   <img
                     src="images/hotels/nicate-lee-kT-ZyaiwBe0-unsplash.jpg
               "
@@ -206,7 +219,10 @@
                 </div>
                 <div class="annonce_1_text">
                   <h3>Auberge le panier</h3>
-                  <p>nuit à partir de <strong>23€.</strong></p>
+                  <p>
+                    nuit à partir de <div class="prix">23</div>
+                    <span class="devise">€</span>
+                  </p>
                   <div class="les_etoiles etoile2">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -220,7 +236,7 @@
 
             <article class="annonce_1">
               <a href="#">
-                <div class="cadrephoto_1">
+                <div class="cadre_photo_1">
                   <img
                     src="images/hotels/febrian-zakaria-M6S1WvfW68A-unsplash.jpg
               "
@@ -229,7 +245,10 @@
                 </div>
                 <div class="annonce_1_text">
                   <h3>Hôtels chez Amina</h3>
-                  <p>nuit à partir de <strong>96€.</strong></p>
+                  <p>
+                    nuit à partir de <div class="prix">96</div>
+                    <span class="devise">€</span>
+                  </p>
                   <div class="les_etoiles etoile3">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -246,7 +265,7 @@
 
           <h5>Afficher plus</h5>
         </section>
-        <!-- fin leshotelsBox -->
+        <!-- fin les_hotels_Box -->
 
         <section id="city_hotelspopu">
           <h2>Les plus populaires <i class="fas fa-chart-line"></i></h2>
@@ -255,7 +274,7 @@
 
           <a href="#">
             <article class="annonce_2">
-              <div class="cadrephoto_2">
+              <div class="cadre_photo_2">
                 <img
                   src="images/hotels/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"
                   alt="Photo Hotel Le Soleil du matin"
@@ -263,7 +282,10 @@
               </div>
               <div class="annonce_2_text">
                 <h3>Hotel Le Soleil du matin</h3>
-                <p>nuit à partir de <strong>128€.</strong></p>
+                <p>
+                  nuit à partir de <div class="prix">128</div>
+                  <span class="devise">€</span>
+                </p>
 
                 <div class="les_etoiles etoile4">
                   <i class="fas fa-star"></i>
@@ -278,7 +300,7 @@
 
           <a href="#">
             <article class="annonce_2">
-              <div class="cadrephoto_2">
+              <div class="cadre_photo_2">
                 <img
                   src="images/hotels/aw-creative-VGs8z60yT2c-unsplash.jpg"
                   alt="Photo Au coeur de l'eau Chambre d'hôtes"
@@ -286,7 +308,10 @@
               </div>
               <div class="annonce_2_text">
                 <h3>Au coeur de l'eau Chambre d'hôtes</h3>
-                <p>nuit à partir de <strong>71€.</strong></p>
+                <p>
+                  nuit à partir de <div class="prix">71</div>
+                  <span class="devise">€</span>
+                </p>
 
                 <div class="les_etoiles etoile5">
                   <i class="fas fa-star"></i>
@@ -301,7 +326,7 @@
 
           <a href="#">
             <article class="annonce_2">
-              <div class="cadrephoto_2">
+              <div class="cadre_photo_2">
                 <img
                   src="images/hotels/febrian-zakaria-sjvU0THccQA-unsplash.jpg"
                   alt="Photo Hotel Tout bleu et blanc"
@@ -309,7 +334,10 @@
               </div>
               <div class="annonce_2_text">
                 <h3>Hotel Tout bleu et blanc</h3>
-                <p>nuit à partir de <strong>68€.</strong></p>
+                <p>
+                  nuit à partir de <div class="prix">68</div>
+                  <span class="devise">€</span>
+                </p>
 
                 <div class="les_etoiles etoile4">
                   <i class="fas fa-star"></i>
@@ -336,7 +364,7 @@
 
           <article class="annonce_3">
             <a href="#">
-              <div class="cadrephoto_3">
+              <div class="cadre_photo_3">
                 <img
                   src="images/activites/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg
           "
@@ -349,7 +377,7 @@
 
           <article class="annonce_3">
             <a href="#">
-              <div class="cadrephoto_3">
+              <div class="cadre_photo_3">
                 <img
                   src="images/activites/paul-hermann-QFTrLdQIRhI-unsplash.jpg
           "
@@ -362,7 +390,7 @@
 
           <article class="annonce_3">
             <a href="#">
-              <div class="cadrephoto_3">
+              <div class="cadre_photo_3">
                 <img
                   src="images/activites/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg
           "
@@ -375,7 +403,7 @@
 
           <article class="annonce_3">
             <a href="#">
-              <div class="cadrephoto_3">
+              <div class="cadre_photo_3">
                 <img
                   src="images/activites/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg
           "
@@ -388,7 +416,7 @@
 
           <article class="annonce_3">
             <a href="#">
-              <div class="cadrephoto_3">
+              <div class="cadre_photo_3">
                 <img
                   src="images/activites/florian-wehde-xW9e8gdotxI-unsplash.jpg
           "
@@ -401,7 +429,7 @@
 
           <article class="annonce_3">
             <a href="#">
-              <div class="cadrephoto_3">
+              <div class="cadre_photo_3">
                 <img
                   src="images/activites/lena-paulin-wH2-EJoDcV0-unsplash.jpg
           "
@@ -417,7 +445,7 @@
       </section>
     </div>
     <!--fin vrapper-->
-
+    <div class="bidon">bidon</div>
     <!-- Footer -->
     <footer>
       <div class="foot_txt">
