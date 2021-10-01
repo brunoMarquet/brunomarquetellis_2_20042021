@@ -1,0 +1,67 @@
+<html lang="fr">
+  <title>iframe_p2"</title>
+  <head>
+    <script>
+      function change_width(largeur) {
+        document.getElementById("zi_p3").width=largeur;
+        //var frames = window.frames;
+
+       
+       // alert( frames[0].location);
+      
+      }
+     /*  function change_scroll(koi){
+         if (koi==1){
+              document.getElementById("zi_p3").scrolling="yes";
+         }else{ document.getElementById("zi_p3").scrolling="no";}
+      } */
+      function permut_fichier(){
+        document.getElementById("zi_p3"). src="index_comp.html";
+      }
+      function permut_scroll(){
+        if(document.getElementById("zi_p3").scrolling== "yes"){
+          document.getElementById("zi_p3").scrolling="no";
+
+        }else{
+          document.getElementById("zi_p3").scrolling="yes";
+        }
+      }
+    </script>
+  </head>
+
+  <body> <button onclick="permut_scroll()">barre de scrolling</button>
+    <button onclick="permut_fichier()">fichier</button>
+      <select onchange="change_width(this.value)">
+	  <option value=1550>1550-par défaut</option>
+          <option value=300>300</option>
+          <option value=320>320</option>
+          <option value=340>340</option>
+          <option value=375>375 la valeur du visuel</option>
+          <option value=400>400</option>
+          <option value=500>500</option>
+          <option value=600>600</option>
+          <option value=700>700</option>
+          <option value=900>900</option>
+          <option value=1100>1100</option>
+          <option value=1200>1200</option>
+          <option value=1400>1400</option>
+          <option value=1550>1550</option>
+
+      </select>
+    
+   
+
+    <hr>
+    <iframe
+      id="zi_p3"
+      title="zi_p3_titre"
+      width="1550 px";
+       scrolling="yes";
+      height="100%"; 
+      src="../index.html"
+    </iframe>
+    <script>
+        var l_fr= document.getElementById("zi_p3");
+    </script>
+  </body>
+</html>

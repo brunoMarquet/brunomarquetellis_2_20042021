@@ -20,13 +20,33 @@
     />
 
     <link rel="stylesheet" type="text/css" href="../css_P2.css" />
-	 <link rel="stylesheet" href="semantique.css">
 
     <!--
 
   <link rel="stylesheet"  type="text/css" href="divers/semantique.css">
    -->
   </head>
+  <style>
+    #mreservia1,
+    #mreservia3 {
+      display: none;
+    }
+    .test2 {
+      margin-left: 64px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      #mreservia1,
+      #mreservia3 {
+        display: inline-block;
+      }
+      #reservia2,
+      #reservia7,
+      #reservia6 {
+        display: none;
+      }
+    }
+  </style>
 
   <body>
     <div class="wraper">
@@ -35,10 +55,12 @@
 
         <img src="../images/Reservia.svg" class="logo" alt="logo de Reservia" />
         <!-- Navigation Bar  -->
+        <img src="../img_temp/reservia1.png" alt="" />
         <nav>
           <a href="#Hebergements" class="navCAtegory">Hébergements</a>
           <a href="#les_activites" class="navCAtegory">Activités</a>
         </nav>
+
         <a href="#" class="navinscrire">S'inscrire</a>
       </header>
 
@@ -62,7 +84,9 @@
         </div>
 
         <br />
-
+        <img id="reservia2" src="../img_temp/reservia2.png" alt="" /><br />
+        <img id="mreservia1" src="../img_temp/mreservia1.png" alt="" /><br />
+        <img src="../img_temp/reservia3.png" alt="" /><br />
         <div id="liste_filtres">
           <div class="titre_filtre">Filtres</div>
           <label class="filtre">
@@ -94,6 +118,31 @@
         <p><i class="fas fa-info"></i></p>
         <p>Plus de 500 logements sont disponibles !</p>
       </div>
+      <article class="annonce_1 test2">
+        <a href="#">
+          <div class="cadre_photo_1">
+            <img
+              src="../images/hotels/marcus-loke-WQJvWU_HZFo-unsplash.jpg
+      "
+              alt="Photo auberge la Cannebière"
+            />
+          </div>
+          <div class="annonce_1_text">
+            <h3>Auberge La Cannebière</h3>
+            <p>
+              Nuit à partir de <strong>25</strong><span class="devise">€</span>
+            </p>
+            <div class="les_etoiles etoile3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div></div
+        ></a>
+      </article>
+
+      <img src="../img_temp/reservia7.png" id="reservia7" alt="" /><br />
 
       <main id="Hebergements">
         <!--pour l'ancre et eviter une balise-->
@@ -336,6 +385,8 @@
         <!--fin logements populaires-->
       </main>
       <!--fin id="resultatslogements"-->
+      <img id="mreservia3" src="../img_temp/mreservia3.png" alt="" /><br />
+      <img id="reservia6" src="../img_temp/reservia6.png" alt="" /><br />
 
       <section id="les_activites">
         <div><h2>Activités à Marseille</h2></div>
